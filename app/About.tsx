@@ -16,24 +16,17 @@ const TechPill = ({ name, className }: { name: string, className: string }) => (
 
 export function About() {
   return (
-    // We remove the <StickyScroll> component entirely
     <div className="container mx-auto max-w-6xl px-6">
       <h2 className="mb-16 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-3xl font-bold text-transparent md:text-5xl">
         A Bit About Me
       </h2>
       
-      {/* New 2-Column Layout */}
       <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
-        
-        {/* --- THIS IS THE FIX --- */}
-        {/* Left Column: Wrapped Profile Card */}
-        {/* We wrap the card in a flex container to center it */}
+
         <div className="flex w-full items-center justify-center">
           <ProfileCard />
         </div>
-        {/* --- END FIX --- */}
-        
-        {/* Right Column: Tabs */}
+
         <div className="flex flex-col justify-center">
           <Tabs defaultValue="who" className="w-full">
             <TabsList className="mb-4 grid w-full grid-cols-3 bg-neutral-900/80">

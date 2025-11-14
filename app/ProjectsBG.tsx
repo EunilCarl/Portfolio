@@ -36,7 +36,7 @@ export function ProjectsBG() {
     "https://assets.aceternity.com/world-map.webp",
   ];
   return (
-    <div className="absolute inset-0 z-0 h-full w-full overflow-hidden">
+    <div className="absolute inset-0 z-0 h-screen w-full overflow-hidden">
       <ThreeDMarquee images={images} className="opacity-40 h-screen"/>
     </div>
   );

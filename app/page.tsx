@@ -15,6 +15,9 @@ import { Hero } from "./Hero";
 import { About } from "./About";
 import { Projects } from "./Projects";
 import { Certificates } from "./Certificates";
+import { Education } from "./Education";
+import { Contact } from "./Contact";
+import { Expertise } from "./Expertise";
 export default function Home() {
   const navItems = [
     {
@@ -26,16 +29,16 @@ export default function Home() {
       link: "#about",
     },
     {
-      name: "Education",
-      link: "#education",
-    },
-     {
       name: "Expertise",
       link: "#expertise",
     },
     {
       name: "Projects",
       link: "#projects",
+    },
+    {
+      name: "Education",
+      link: "#education",
     },
     {
       name: "Contact",
@@ -91,6 +94,10 @@ export default function Home() {
         <section id="about" className="py-20">
           <About/>
         </section>
+
+        <section id="expertise" className="py-20">
+          <Expertise/>
+        </section>
         
         <section id="projects" className="py-20">
           <Projects/>
@@ -98,6 +105,14 @@ export default function Home() {
 
         <section id="projects" className="py-20">
           <Certificates/>
+        </section>
+
+        <section id="education" className="py-20">
+          <Education/>
+        </section>
+        
+        <section id="contact" className="py-20">
+          <Contact/>
         </section>
         
 

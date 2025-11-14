@@ -37,17 +37,13 @@ export function Projects() {
   return (
     <div className="relative w-full py-20">
       
-      {/* 1. The Background (No change) */}
       <ProjectsBG />
-      
-      {/* 2. The Content (Updated) */}
+
       <div className="relative z-10 container mx-auto max-w-6xl px-6">
         <h2 className="mb-12 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-3xl font-bold text-transparent md:text-5xl">
           Recent Projects
         </h2>
         
-        {/* --- NEW PROJECT GRID --- */}
-        {/* We use a simple, responsive 2-column grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, i) => (
             <a
@@ -78,13 +74,11 @@ export function Projects() {
             </a>
           ))}
         </div>
-        
-        {/* --- NEW "VIEW ALL" BUTTON --- */}
+
         <div className="mt-16 flex w-full justify-center">
           <HoverBorderGradient
             containerClassName="rounded-full"
-            as="a" // Changed to an 'a' tag
-            href="/projects" // Point this to your full projects page
+            as="a" 
             className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 px-6 py-3"
           >
             <span>View All Projects</span>
