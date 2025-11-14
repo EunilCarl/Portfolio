@@ -2,49 +2,71 @@
 import React from "react";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 
-// Updated Tech Stack with specific designations
 const techStacks = [
+  // Front-End
   {
     id: 1,
     name: "HTML5",
-    designation: "Front-End Structure",
+    designation: "Front-End",
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
   },
   {
     id: 2,
     name: "CSS3",
-    designation: "Front-End Styling",
+    designation: "Front-End",
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
   },
   {
     id: 3,
     name: "JavaScript",
-    designation: "Core Language",
+    designation: "Front-End",
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
   },
   {
+    id: 6,
+    name: "Next.js",
+    designation: "Front-End",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+  },
+  
+  // Libraries
+  {
     id: 4,
     name: "React",
-    designation: "Front-End Library",
+    designation: "Libraries",
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
   {
     id: 5,
     name: "Tailwind CSS",
-    designation: "Styling Framework",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+    designation: "Libraries",
+    image: "https://scontent.fsfs1-1.fna.fbcdn.net/v/t39.30808-6/299463877_560030875914611_8025210373789510385_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGDrc_rwHDv0T8AugwyGK2oXyjiulHN1tJfKOK6Uc3W0ow4wxBSsqDdtnpRd4nkTnbn41vMc2m-XGso71i3D7lc&_nc_ohc=1hwpGnExzvYQ7kNvwFddaFo&_nc_oc=AdmrQ-qvsa2YOjPg9X2jgZ4zP3WB6ZWK6ConrJdP3BRj5oRV4nbAqMDacAifkH7NQdQ&_nc_zt=23&_nc_ht=scontent.fsfs1-1.fna&_nc_gid=O7micju6hZvUkEadCz860Q&oh=00_Afgbfrz0HF-a8DGLgLHpHchYfiQwyxdhxEejmWkDTGTBMw&oe=691D49B7"
   },
   {
-    id: 6,
-    name: "Next.js",
-    designation: "Full-Stack Framework",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    id: 14,
+    name: "shadcn/ui",
+    designation: "Libraries",
+    image: "https://avatars.githubusercontent.com/u/139895814?v=4",
   },
+  {
+    id: 16,
+    name: "Bootstrap",
+    designation: "Libraries",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+  },
+
+  // Back-End
   {
     id: 7,
     name: "Node.js",
-    designation: "Back-End Runtime",
+    designation: "Back-End",
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  },
+  {
+    id: 12,
+    name: "PHP",
+    designation: "Back-End",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
   },
   {
     id: 8,
@@ -55,20 +77,52 @@ const techStacks = [
   {
     id: 9,
     name: "Supabase",
-    designation: "Baas / Database",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-icon.svg",
+    designation: "BaaS / Database",
+    image: "supabase.svg",
   },
   {
     id: 10,
     name: "MySQL",
-    designation: "Relational Database",
+    designation: "Database",
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
   },
   {
+    id: 15,
+    name: "ASP.NET",
+    designation: "Back-End",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/1200px-.NET_Core_Logo.svg.png",
+  },
+  {
+    id: 18,
+    name: "MongoDB",
+    designation: "Database",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  },
+  
+  // Tools
+  {
     id: 11,
     name: "Git & GitHub",
-    designation: "Version Control",
+    designation: "Tools",
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  },
+  {
+    id: 13,
+    name: "Figma",
+    designation: "Tools",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+  },
+  {
+    id: 17,
+    name: "VS Code",
+    designation: "Tools",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+  },
+  {
+    id: 19,
+    name: "Visual Studio",
+    designation: "Tools",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg",
   },
 ];
 

@@ -48,13 +48,13 @@ export function Hero() {
 
         <div className="hidden shrink-0 justify-center sm:flex md:justify-end">
           <BackgroundGradient
-            className="flex h-64 w-64 items-center justify-center rounded-full bg-neutral-900/60 shadow-xl shadow-black/20 backdrop-blur-md"
-            containerClassName="h-64 w-64"
+            className="flex h-full w-full items-center justify-center rounded-full bg-neutral-900/60 shadow-xl shadow-black/20 backdrop-blur-md"
+            containerClassName="h-84 w-84"
           >
             <img
               src="/favicon.svg"
               alt="Eunil's Logo"
-              className="h-36 w-36"
+              className="h-67 w-67"
             />
           </BackgroundGradient>
         </div>

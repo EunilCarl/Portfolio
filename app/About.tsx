@@ -29,9 +29,8 @@ export function About() {
 
         <div className="flex flex-col justify-center">
           <Tabs defaultValue="who" className="w-full">
-            <TabsList className="mb-4 grid w-full grid-cols-3 bg-neutral-900/80">
+            <TabsList className="mb-4 grid w-full grid-cols-2 bg-neutral-900/80">
               <TabsTrigger value="who">Who I Am</TabsTrigger>
-              <TabsTrigger value="toolkit">My Toolkit</TabsTrigger>
               <TabsTrigger value="philosophy">My Philosophy</TabsTrigger>
             </TabsList>
             
@@ -45,23 +44,6 @@ export function About() {
                 My goal is to build web applications that are not only functional 
                 but also a delight to use.
               </p>
-            </TabsContent>
-            
-            <TabsContent value="toolkit">
-              <p className="mb-4 text-neutral-300">
-                I specialize in the modern web stack. Here are the
-                primary technologies I work with:
-              </p>
-              {/* These pills are styled just like your ProfileCard */}
-              <div className="flex flex-wrap gap-2">
-                <TechPill name="React" className="border-cyan-400/30 bg-cyan-400/10 text-cyan-300" />
-                <TechPill name="Next.js" className="border-neutral-400/30 bg-neutral-400/10 text-neutral-300" />
-                <TechPill name="Tailwind CSS" className="border-sky-400/30 bg-sky-400/10 text-sky-300" />
-                <TechPill name="Supabase" className="border-green-400/30 bg-green-400/10 text-green-300" />
-                <TechPill name="PHP" className="border-indigo-400/30 bg-indigo-400/10 text-indigo-300" />
-                <TechPill name="Figma" className="border-pink-400/30 bg-pink-400/10 text-pink-300" />
-                {/* Add more pills here as needed */}
-              </div>
             </TabsContent>
             
             <TabsContent value="philosophy" className="text-neutral-300">
