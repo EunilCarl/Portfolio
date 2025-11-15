@@ -163,7 +163,7 @@ export const DraggableCardBody = ({
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className={cn(
-        "relative min-h-96 w-80 overflow-hidden rounded-md bg-neutral-100 p-6 shadow-2xl transform-3d dark:bg-neutral-900",
+        "relative min-h-65 w-78 overflow-hidden rounded-md bg-neutral-100 shadow-2xl transform-3d dark:bg-neutral-900",
         className,
       )}
     >
@@ -172,7 +172,7 @@ export const DraggableCardBody = ({
         style={{
           opacity: glareOpacity,
         }}
-        className="pointer-events-none absolute inset-0 bg-white select-none"
+        className="cursor-pointer absolute inset-0 bg-white select-none"
       />
     </motion.div>
   );

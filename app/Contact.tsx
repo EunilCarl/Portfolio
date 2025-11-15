@@ -19,7 +19,7 @@ export function Contact() {
         <input
           type="text"
           placeholder="your.email@example.com"
-          className="rounded-lg border border-neutral-800 focus:ring-2 focus:ring-teal-500 w-full relative z-10 mt-4 bg-neutral-950 placeholder:text-neutral-700"
+          className="rounded-lg p-2 border border-neutral-800 focus:ring-2 focus:ring-teal-500 w-full relative z-10 mt-4 bg-neutral-950 placeholder:text-neutral-700"
         />
       </div>
       <BackgroundBeams />

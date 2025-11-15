@@ -7,63 +7,60 @@ import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 export function Certificates() {
   const items = [
+    // ---------- LEFT SIDE ----------
     {
       title: "GitHub Foundations",
-      image:
-        "https://images.credly.com/size/340x340/images/024d0122-724d-4c5a-bd83-cfe3c4b7a073/image.png",
-      className: "absolute top-10 left-[20%] rotate-[-5deg]",
-    },
-    {
-      title: "Google AI Essentials",
-      image:
-        "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~NJ3H612VAAS7/CERTIFICATE_LANDING_PAGE~NJ3H612VAAS7.jpeg",
-      className: "absolute top-40 left-[25%] rotate-[-7deg]",
+      image: "https://ik.imagekit.io/6j61dmdpg/Certificates/GitHubFoundations.png?updatedAt=1763198432410",
+      className: "absolute top-2 left-[20%] rotate-[-6deg]",
     },
     {
       title: "Google Cybersecurity Specialization",
-      image:
-        "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~0FOM9EWICTEO/CERTIFICATE_LANDING_PAGE~0FOM9EWICTEO.jpeg",
-      className: "absolute top-5 left-[40%] rotate-[8deg]",
-    },
-    {
-      title: "Google UX Design Specialization",
-      image:
-        "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~9GHBH1DIHEY9/CERTIFICATE_LANDING_PAGE~9GHBH1DIHEY9.jpeg",
-      className: "absolute top-32 left-[55%] rotate-[10deg]",
-    },
-    {
-      title: "IC3 Digital Literacy Certification GS6 Level 1",
-      image:
-        "https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      className: "absolute top-20 right-[35%] rotate-[2deg]",
-    },
-    {
-      title: "DICT-WD001 Principles of Web Development and Introduction to HTML",
-      image:
-        "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      className: "absolute top-24 left-[45%] rotate-[-7deg]",
+      image: "https://ik.imagekit.io/6j61dmdpg/Certificates/Google_Cybersecurity.png?updatedAt=1763198918603",
+      className: "absolute top-37 left-[20%] rotate-[7deg]",
     },
     {
       title: "HTML, CSS, Javascript, React Certification",
-      image:
-        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      className: "absolute top-8 left-[30%] rotate-[4deg]",
+      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop",
+      className: "absolute top-72 left-[24%] rotate-[4deg]",
     },
-     {
+
+    // ---------- CENTER GROUP ----------
+    {
       title: "IT Specialist - Software Development",
-      image:
-        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      className: "absolute top-10 left-[30%] rotate-[12deg]",
+      image: "https://ik.imagekit.io/6j61dmdpg/Certificates/SoftwareDevelopment.png?updatedAt=1763198418561",
+      className: "absolute top-10 left-1/2 -translate-x-1/2 rotate-[12deg]",
     },
-     {
+    {
+      title: "IC3 Digital Literacy Certification GS6 Level 1",
+      image: "https://ik.imagekit.io/6j61dmdpg/Certificates/IC3GS6_Level1.png?updatedAt=1763198432596",
+      className: "absolute top-42 left-1/2 -translate-x-1/2 rotate-[2deg]",
+    },
+    {
       title: "IC3 Digital Literacy Certification GS6 Level 2",
-      image:
-        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      className: "absolute top-16 left-[30%] rotate-[9deg]",
+      image: "https://ik.imagekit.io/6j61dmdpg/Certificates/IC3GS6_Level2.png?updatedAt=1763198432581",
+      className: "absolute top-70 left-1/2 -translate-x-1/2 rotate-[9deg]",
+    },
+
+    // ---------- RIGHT SIDE ----------
+    {
+      title: "Google AI Essentials",
+      image: "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~NJ3H612VAAS7/CERTIFICATE_LANDING_PAGE~NJ3H612VAAS7.jpeg",
+      className: "absolute top-2 right-[22%] rotate-[-5deg]",
+    },
+    {
+      title: "Google UX Design Specialization",
+      image: "https://ik.imagekit.io/6j61dmdpg/Certificates/Google_UXDesign.png?updatedAt=1763198918547",
+      className: "absolute top-32 right-[20%] rotate-[10deg]",
+    },
+    {
+      title: "DICT-WD001 Principles of Web Development & HTML",
+      image: "https://ik.imagekit.io/6j61dmdpg/Certificates/DICT_HTML.png?updatedAt=1763198918243",
+      className: "absolute top-70 right-[19%] rotate-[-7deg]",
     },
   ];
+
   return (
-    <div className="mx-auto w-full ">
+    <div className="mx-auto w-full">
         <h2 className="mb-4 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-3xl font-bold text-transparent md:text-5xl">
         My Certifications
       </h2>
@@ -72,20 +69,37 @@ export function Certificates() {
         <br />
         Feel free to drag them around.
       </p>
-    <DraggableCardContainer className="relative flex min-h-screen w-full items-center justify-center overflow-clip">
+    <DraggableCardContainer className="relative flex min-h-150 w-full items-center justify-center overflow-clip">
   
       {items.map((item) => (
-        <DraggableCardBody className={item.className} >
-          <img
-            src={item.image}
-            alt={item.title}
-            className="pointer-events-none relative z-10 h-80 w-80 object-cover"
-          />
-          <h3 className="mt-4 text-center text-2xl font-bold text-neutral-700 dark:text-neutral-300">
-            {item.title}
-          </h3>
-        </DraggableCardBody>
-      ))}
+  <DraggableCardBody
+    className={`
+      ${item.className}
+      w-[22rem]
+      h-[15rem]
+      rounded-lg
+      bg-card
+      shadow-[0_8px_20px_-4px_rgba(0,0,0,0.2)]
+      dark:shadow-[0_8px_20px_-4px_rgba(0,0,0,0.5)]
+      ring-1
+      ring-ring/20
+      backdrop-blur-sm
+      flex
+      flex-col
+      items-center
+      justify-center
+    `}
+  >
+    <div className="relative w-full h-full rounded-lg overflow-hidden shadow-inner bg-gradient-to-br from-background to-muted">
+      <img
+        src={item.image}
+        alt={item.title}
+        className="pointer-events-none w-full h-full object-cover rounded-lg"
+      />
+    </div>
+  </DraggableCardBody>
+))}
+
     </DraggableCardContainer>
     <div className="mt-12 flex w-full justify-center">
         <HoverBorderGradient
@@ -93,7 +107,7 @@ export function Certificates() {
           as="button"
           className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 px-6 py-2"
         >
-          <span>View All Certificates</span>
+          <a href="https://drive.google.com/drive/folders/1s5BjJuZy2RT1h7ziZjk2Lbnv0ydW4oUw">View All Certificates</a>
         </HoverBorderGradient>
       </div>
     </div>
