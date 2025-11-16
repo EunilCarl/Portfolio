@@ -4,6 +4,7 @@ import {
   DraggableCardContainer,
 } from "@/components/ui/draggable-card";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+import { MobileCerts } from "./MobileCerts";
 
 export function Certificates() {
   const items = [
@@ -20,7 +21,7 @@ export function Certificates() {
     },
     {
       title: "HTML, CSS, Javascript, React Certification",
-      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop",
+      image: "https://ik.imagekit.io/6j61dmdpg/Certificates/HTML-CSS-JS-React.png",
       className: "absolute top-72 left-[24%] rotate-[4deg]",
     },
 
@@ -44,7 +45,7 @@ export function Certificates() {
     // ---------- RIGHT SIDE ----------
     {
       title: "Google AI Essentials",
-      image: "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~NJ3H612VAAS7/CERTIFICATE_LANDING_PAGE~NJ3H612VAAS7.jpeg",
+      image: "https://ik.imagekit.io/6j61dmdpg/Certificates/AI.png",
       className: "absolute top-2 right-[22%] rotate-[-5deg]",
     },
     {
@@ -67,8 +68,9 @@ export function Certificates() {
       <p className="mb-12 text-center text-base font-normal text-neutral-300 md:text-lg">
         A collection of my recent certifications and completed courses.
         <br />
-        Feel free to drag them around.
+        <span className="hidden sm:block">Feel free to drag them around.</span>
       </p>
+      <div className="hidden sm:block">
     <DraggableCardContainer className="relative flex min-h-150 w-full items-center justify-center overflow-clip">
   
       {items.map((item) => (
@@ -101,6 +103,10 @@ export function Certificates() {
 ))}
 
     </DraggableCardContainer>
+    </div>
+    <div className="block sm:hidden">
+      <MobileCerts></MobileCerts>
+    </div>
     <div className="mt-12 flex w-full justify-center">
         <HoverBorderGradient
           containerClassName="rounded-full"
