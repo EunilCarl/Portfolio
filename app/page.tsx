@@ -51,13 +51,11 @@ export default function Home() {
   return (
     <div className="dark relative w-full bg-background">
       <Navbar >
-        {/* Desktop Navigation */}
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
         </NavBody>
  
-        {/* Mobile Navigation */}
         <MobileNav>
           <MobileNavHeader>
             <NavbarLogo />
@@ -85,8 +83,6 @@ export default function Home() {
         </MobileNav>
       </Navbar>
 
-
-        {/* Each section component is placed here */}
         <section id="home">
           <Hero />
         </section>

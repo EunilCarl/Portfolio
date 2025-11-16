@@ -1,35 +1,35 @@
 "use client";
 import React from "react";
-// Removed BentoGrid imports
 import { ArrowRight } from "lucide-react";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { ProjectsBG } from "./ProjectsBG"; 
+import Link from "next/link";
 
 export function Projects() {
   const projects = [
     {
       title: "Mass Guide Web App",
       description: "A web application to guide users, built with Next.js and Supabase.",
-      imageUrl: "favicon.svg", // Replace with your project image
-      link: "#", // Replace with your project link
-      // 'className' is no longer needed
+      imageUrl: "favicon.svg", 
+      link: "#",
+
     },
     {
       title: "BPSU Bulletin Logo",
       description: "Logo and branding design for a university publication.",
-      imageUrl: "favicon.svg", // Replace with your project image
+      imageUrl: "favicon.svg", 
       link: "#",
     },
     {
       title: "Parol Contest Entry",
       description: "A design project focusing on recycled materials.",
-      imageUrl: "favicon.svg", // Replace with your project image
+      imageUrl: "favicon.svg", 
       link: "#",
     },
     {
       title: "Personal Portfolio",
       description: "The very site you're on, built with Aceternity UI.",
-      imageUrl: "favicon.svg", // Replace with your project image
+      imageUrl: "favicon.svg", 
       link: "#",
     },
   ];
@@ -49,10 +49,8 @@ export function Projects() {
             <a
               href={project.link}
               key={i}
-              // This is our new "glassmorphic" card, consistent with the site
               className="group relative block w-full overflow-hidden rounded-xl border border-neutral-700/80 bg-neutral-900/60 p-4 shadow-xl shadow-black/20 backdrop-blur-md transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
             >
-              {/* [Image of a project thumbnail] */}
               <img
                 src={project.imageUrl}
                 alt={project.title}
@@ -66,8 +64,7 @@ export function Projects() {
                   {project.description}
                 </p>
               </div>
-              
-              {/* Subtle hover icon */}
+
               <div className="absolute top-4 right-4 flex h-8 w-8 items-center justify-center rounded-full bg-neutral-800/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <ArrowRight className="h-4 w-4 text-white" />
               </div>
@@ -81,7 +78,7 @@ export function Projects() {
             as="a" 
             className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 px-6 py-3"
           >
-            <span>View All Projects</span>
+            <Link href="/all-projects">View All Projects</Link>
             <ArrowRight className="ml-1 h-4 w-4" />
           </HoverBorderGradient>
         </div>
