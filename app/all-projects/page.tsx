@@ -60,7 +60,7 @@ export default function AllProjects() {
   ];
 
   return (
-    <html lang="en" className="dark">
+    <>
       <head>
         <link
           rel="stylesheet"
@@ -139,6 +139,6 @@ export default function AllProjects() {
           ))}
         </div>
       </section>
-    </html>
+      </>
   );
 }

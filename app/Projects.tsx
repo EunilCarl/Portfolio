@@ -20,18 +20,6 @@ export function Projects() {
       imageUrl: "favicon.svg", 
       link: "#",
     },
-    {
-      title: "Parol Contest Entry",
-      description: "A design project focusing on recycled materials.",
-      imageUrl: "favicon.svg", 
-      link: "#",
-    },
-    {
-      title: "Personal Portfolio",
-      description: "The very site you're on, built with Aceternity UI.",
-      imageUrl: "favicon.svg", 
-      link: "#",
-    },
   ];
 
   return (
