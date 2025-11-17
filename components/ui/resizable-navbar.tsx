@@ -239,7 +239,7 @@ export const NavbarLogo = () => {
       <img
         src="logo.svg"
         alt="logo"
-        width={30}
+        width={25}
         height={30}
       />
     </a>

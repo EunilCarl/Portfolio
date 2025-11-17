@@ -2,143 +2,163 @@
 
 import React from "react";
 import Link from "next/link";
-import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
 import Image from "next/image";
+import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { PointerHighlight } from "@/components/ui/pointer-highlight";
 
 export default function AllProjects() {
   const projects = [
     {
-      title: "UniTrack – Lost & Found App",
+      title: "UniTrack",
+      subtitle: "Lost & Found App",
       description:
         "A university lost & found system with maps, posting, and real-time updates.",
-      image: "favicon.svg",
+      image: "/unitrack.png",
       tech: ["Android", "Firebase", "OSMDroid"],
-      link: "/projects/unitrack",
+      link: "/all-projects/unitrack",
     },
     {
-      title: "GawaPH – Freelance Job Portal",
+      title: "GawaPH",
+      subtitle: "Freelance Job Portal",
       description:
         "A freelance marketplace for local communities built using ASP.NET MVC + Supabase.",
-      image: "favicon.svg",
+      image: "/favicon.svg",
       tech: ["ASP.NET", "Supabase", "MVC"],
-      link: "/projects/gawaph",
+      link: "/all-projects/gawaph",
     },
     {
-      title: "Levenshtein Visualizer",
+      title: "Levenshtein Viz",
+      subtitle: "Algorithm Visualizer",
       description:
         "Interactive visualization tool for edit distance algorithm with animations.",
-      image: "favicon.svg",
+      image: "/favicon.svg",
       tech: ["React", "Framer Motion", "TypeScript"],
-      link: "/projects/levenshtein",
+      link: "/all-projects/levenshtein",
     },
     {
-      title: "UniTrack – Lost & Found App",
+      title: "UniTrack",
+      subtitle: "Lost & Found App",
       description:
         "A university lost & found system with maps, posting, and real-time updates.",
-      image: "favicon.svg",
+      image: "/favicon.svg",
       tech: ["Android", "Firebase", "OSMDroid"],
-      link: "/projects/unitrack",
+      link: "/all-projects/unitrack",
     },
     {
-      title: "GawaPH – Freelance Job Portal",
+      title: "GawaPH",
+      subtitle: "Freelance Job Portal",
       description:
         "A freelance marketplace for local communities built using ASP.NET MVC + Supabase.",
-      image: "favicon.svg",
+      image: "/favicon.svg",
       tech: ["ASP.NET", "Supabase", "MVC"],
-      link: "/projects/gawaph",
+      link: "/all-projects/gawaph",
     },
     {
-      title: "Levenshtein Visualizer",
+      title: "Levenshtein Viz",
+      subtitle: "Algorithm Visualizer",
       description:
         "Interactive visualization tool for edit distance algorithm with animations.",
-      image: "favicon.svg",
+      image: "/favicon.svg",
       tech: ["React", "Framer Motion", "TypeScript"],
-      link: "/projects/levenshtein",
+      link: "/all-projects/levenshtein",
     },
   ];
 
   return (
     <>
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-        />
-      </head>
+      <main className="relative min-h-screen w-full bg-black text-white overflow-x-hidden selection:bg-yellow-500/30">
+        <div className="fixed inset-0 pointer-events-none z-0">
+          <BackgroundRippleEffect />
+        </div>
 
-      <section className="relative min-h-screen w-full flex justify-center items-center flex-col overflow-hidden dark:bg-black bg-white">
-        <BackgroundRippleEffect />
-
-        <div className="max-w-7xl w-full z-10 pt-40 pb-10 text-center relative px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-24">
           <Link
             href="/"
-            className="group absolute top-10 left-5 md:top-20 md:left-0 flex items-center gap-2 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors duration-300 text-sm md:text-base"
+            className="group inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-200 transition-colors mb-20 text-sm uppercase tracking-wider"
           >
-            <span className="material-symbols-outlined transition-transform duration-300 group-hover:-translate-x-1">
+            <span className="material-symbols-outlined text-[18px] group-hover:-translate-x-1 transition-transform">
               arrow_back
             </span>
             Back to Portfolio
           </Link>
 
-          <h2 className="text-4xl md:text-7xl font-bold dark:text-white text-neutral-900">
-            My <PointerHighlight  rectangleClassName="bg-yellow-200/10 border-yellow-300" pointerClassName="text-yellow-500 " containerClassName="inline-block mr-1"> <span className="text-yellow-400">Projects </span></PointerHighlight>
-          </h2>
-          <p className="mt-4 text-neutral-600 dark:text-neutral-400 max-w-xl mx-auto">
-            A collection of apps, websites, and creative builds I've made. Hover
-            and explore each project.
-          </p>
+          <div className="mb-24 max-w-3xl">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+              My{" "}
+              <PointerHighlight
+                rectangleClassName="bg-yellow-500/10 border border-yellow-500/30"
+                pointerClassName="text-yellow-500"
+                containerClassName="inline-block mr-2"
+              >
+                <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-zinc-500">
+                Projects
+                </span>
+              </PointerHighlight>
+            </h1>
+            <p className="text-xl text-zinc-400 font-light leading-relaxed">
+              A collection of apps, websites, and creative builds I've engineered.
+              Explore the case studies below.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pb-24">
+            {projects.map((project, i) => (
+              <Link href={project.link} key={i} className="group block h-full">
+                <HoverBorderGradient
+                  as="div"
+                  containerClassName="h-full rounded-3xl bg-zinc-900/20 backdrop-blur-sm"
+                  className="flex flex-col h-full w-full p-6 md:p-8 bg-black/40"
+                >
+                  <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border border-zinc-800 mb-8 group-hover:border-zinc-600 transition-colors">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10" />
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover transform group-hover:scale-105 transition-transform duration-700"
+                      priority={i < 2}
+                    />
+                    <div className="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                      <div className="bg-white text-black p-2 rounded-full flex items-center justify-center shadow-lg">
+                        <span className="material-symbols-outlined text-[20px]">
+                          arrow_outward
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col flex-grow">
+                    <div className="mb-4">
+                      <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-yellow-400 transition-colors">
+                        {project.title}
+                      </h3>
+                      <p className="text-sm text-zinc-500 font-medium uppercase tracking-wider">
+                        {project.subtitle}
+                      </p>
+                    </div>
+
+                    <p className="text-zinc-400 leading-relaxed mb-8 flex-grow">
+                      {project.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-2 pt-6 border-t border-zinc-800/50">
+                      {project.tech.map((t, j) => (
+                        <span
+                          key={j}
+                          className="px-3 py-1 text-xs font-medium rounded-full border border-zinc-800 bg-zinc-900/50 text-zinc-300"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </HoverBorderGradient>
+              </Link>
+            ))}
+          </div>
         </div>
-
-        <div className="relative z-10 max-w-8xl grid gap-10 px-6 md:px-20 pb-40 grid-cols-1 md:grid-cols-2">
-          {projects.map((project, i) => (
-            <HoverBorderGradient
-              key={i}
-              as="div"
-              containerClassName="relative rounded-xl w-full max-w-full h-[440px] dark:bg-black bg-white"
-              className="flex flex-col h-full w-full rounded-xl p-5"
-            >
-              <Link
-                href={project.link}
-                className="absolute inset-0 z-10"
-                aria-label={`Go to ${project.title} project`}
-              />
-
-              <div className="relative z-0 flex flex-col h-full">
-                <div className="relative w-full h-68 rounded-xl overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-300 hover:scale-105"
-                    priority={true}
-                  />
-                </div>
-
-                <h3 className="mt-5 text-xl font-semibold dark:text-white text-neutral-900">
-                  {project.title}
-                </h3>
-
-                <p className="mt-2 text-sm text-neutral-700 dark:text-neutral-400 flex-grow">
-                  {project.description}
-                </p>
-
-                <div className="mt-auto flex flex-wrap gap-2">
-                  {project.tech.map((t, j) => (
-                    <span
-                      key={j}
-                      className="text-xs px-3 py-1 rounded-2xl bg-neutral-200 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </HoverBorderGradient>
-          ))}
-        </div>
-      </section>
-      </>
+      </main>
+    </>
   );
 }
