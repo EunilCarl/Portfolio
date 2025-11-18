@@ -21,9 +21,60 @@ import {
   Phone,
   Mail,
   MapPin,
+  Coffee,
+  Loader2,
+  Check,
 } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 export function Contact() {
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [message, setMessage] = React.useState("");
+  const [isSending, setIsSending] = React.useState(false);
+  const [isSuccess, setIsSuccess] = React.useState(false);
+  const [isError, setIsError] = React.useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    setIsSending(true);
+    setIsSuccess(false);
+    setIsError(false);
+
+    const templateParams = {
+      title: "Portfolio Contact",
+      name: name,
+      time: new Date().toLocaleString(),
+      message: message,
+      from_email: email,
+      email: email,
+    };
+
+    emailjs
+      .send(
+        "service_midgprl",
+        "template_5ro5kqk",
+        templateParams,
+        "_OHBwm-f_7et-KIz2"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setIsSuccess(true);
+          setIsSending(false);
+          setName("");
+          setEmail("");
+          setMessage("");
+        },
+        (error) => {
+          console.log(error.text);
+          setIsError(true);
+          setIsSending(false);
+        }
+      );
+  };
+
   return (
     <div className="h-auto min-h-[40rem] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased p-4 py-16">
       <div className="max-w-2xl mx-auto">
@@ -31,49 +82,77 @@ export function Contact() {
           Get in Touch
         </h1>
 
-      <div className="relative z-10 flex flex-col sm:flex-row justify-center my-4 text-neutral-400 space-y-4 sm:space-y-0 sm:space-x-8">
-        <div className="flex space-x-8 justify-center">
-          <div className="flex items-center space-x-2">
-            <div className="bg-neutral-700 rounded-full p-2">
-              <Phone className="h-3 w-3 sm:h-4 sm:w-4 text-neutral-400" />
+        <div className="relative z-10 flex flex-col sm:flex-row justify-center my-4 text-neutral-400 space-y-4 sm:space-y-0 sm:space-x-8">
+          <div className="flex space-x-8 justify-center">
+            <div className="flex items-center space-x-2">
+              <div className="bg-neutral-700 rounded-full p-2">
+                <Phone className="h-3 w-3 sm:h-4 sm:w-4 text-neutral-400" />
+              </div>
+              <span className="text-[0.6rem] sm:text-base">
+                +63 909 323 2909
+              </span>
             </div>
-            <span className="text-xs sm:text-base">+63 909 323 2909</span>
+            <div className="flex items-center space-x-2">
+              <div className="bg-neutral-700 rounded-full p-2">
+                <Mail className="h-3 w-3 sm:h-4 sm:w-4 text-neutral-400" />
+              </div>
+              <span className="text-[0.6rem] sm:text-base">
+                eunilcarl02@gmail.com
+              </span>
+            </div>
           </div>
-          <div className="flex items-center space-x-2">
+
+          <div className="flex items-center space-x-2 sm:mt-0 justify-center">
             <div className="bg-neutral-700 rounded-full p-2">
-              <Mail className="h-3 w-3 sm:h-4 sm:w-4 text-neutral-400" />
+              <MapPin className="h-3 w-3 sm:h-4 sm:w-4 text-neutral-400" />
             </div>
-            <span className="text-xs sm:text-base">eunilcarl02@gmail.com</span>
+            <span className="text-[0.6rem] sm:text-base">
+              Balanga City, Bataan
+            </span>
           </div>
         </div>
 
-        <div className="flex items-center space-x-2 sm:mt-0 justify-center">
-          <div className="bg-neutral-700 rounded-full p-2">
-            <MapPin className="h-3 w-3 sm:h-4 sm:w-4 text-neutral-400" />
-          </div>
-          <span className="text-xs sm:text-base">Balanga City, Bataan</span>
-        </div>
-      </div>
-
-        <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10">
+        <p className="text-neutral-500 max-w-lg mx-auto my-2 text-xs md:text-sm text-center relative z-10">
           Have a project in mind, need help, or just want to say hello? I’m
           always open to opportunities, collaborations, or freelance work. Feel
           free to send me a message anytime!
         </p>
 
-        <Dialog>
-          <DialogTrigger asChild>
-            <div className="flex justify-center items-center relative z-10 mt-8">
+        <Dialog
+          onOpenChange={(open) => {
+            if (!open) {
+              setIsSuccess(false);
+              setIsError(false);
+            }
+          }}
+        >
+          <div className="flex flex-col sm:flex-row justify-center items-center relative z-10 mt-8 gap-4">
+            <DialogTrigger asChild>
               <HoverBorderGradient
-                containerClassName="w-auto rounded-full"
+                containerClassName="w-auto rounded-full cursor-pointer"
                 as="button"
                 className="dark:bg-black bg-white text-black dark:text-white flex items-center justify-center space-x-2 px-6 py-2"
               >
-                <span>Say Hi</span>
+                <span>Let's Connect</span>
                 <MessageSquareMore className="h-4 w-4" />
               </HoverBorderGradient>
-            </div>
-          </DialogTrigger>
+            </DialogTrigger>
+
+            <Link
+              href="https://buymeacoffee.com/unil"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <HoverBorderGradient
+                containerClassName="w-auto rounded-full cursor-pointer"
+                as="button"
+                className="bg-neutral-800 text-neutral-200 hover:bg-neutral-700 transition-colors flex items-center justify-center space-x-2 px-6 py-2"
+              >
+                <Coffee className="h-4 w-4" />
+                <span>Buy me a coffee</span>
+              </HoverBorderGradient>
+            </Link>
+          </div>
           <DialogContent className="sm:max-w-[425px] bg-neutral-950 border-neutral-800 text-neutral-200">
             <DialogHeader>
               <DialogTitle className="text-neutral-50">Contact Me</DialogTitle>
@@ -83,26 +162,66 @@ export function Contact() {
               </DialogDescription>
             </DialogHeader>
 
-            <form className="mt-4 space-y-4">
+            <form onSubmit={handleSubmit} className="mt-4 space-y-4">
+              <input
+                type="text"
+                name="from_name"
+                placeholder="Your Name"
+                required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="rounded-lg p-2 border border-neutral-800 focus:ring-2 focus:ring-white-500 w-full bg-neutral-950 placeholder:text-neutral-700 text-neutral-200"
+              />
               <input
                 type="email"
+                name="from_email"
                 placeholder="your.email@example.com"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="rounded-lg p-2 border border-neutral-800 focus:ring-2 focus:ring-white-500 w-full bg-neutral-950 placeholder:text-neutral-700 text-neutral-200"
               />
               <textarea
+                name="message"
                 placeholder="Your message..."
                 rows={5}
-                className="rounded-lg p-2 border border-neutral-800 focus:ring-2 focus:ring-white-500 w-full bg-neutral-950 placeholder:text-neutral-700 text-neutral-200"
-              ></textarea>
+                required
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className="rounded-lg p-2 border border-neutral-800 focus:ring-2 focus:ring-white-500 w-full bg-neutral-950 placeholder:text-neutral-700 text-neutral-200">
+                </textarea>
 
-              <HoverBorderGradient
-                containerClassName="w-full rounded-full"
-                as="button"
-                className="dark:bg-black bg-white text-black dark:text-white flex items-center justify-center space-x-2 w-full px-6 py-2"
-              >
-                <Send className="h-4 w-4" />
-                <span>Send Message</span>
-              </HoverBorderGradient>
+              <button type="submit" disabled={isSending} className="w-full">
+                <HoverBorderGradient
+                  containerClassName="w-full rounded-full cursor-pointer"
+                  as="div"
+                  className="bg-white text-black flex items-center justify-center space-x-2 w-full px-6 py-2 group"
+                >
+                  {isSending ? (
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                  ) : isSuccess ? (
+                    <Check className="h-4 w-4" />
+                  ) : (
+                    <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  )}
+
+                  <span>
+                    {isSending
+                      ? "Sending..."
+                      : isSuccess
+                      ? "Message Sent!"
+                      : isError
+                      ? "Try Again"
+                      : "Send Message"}
+                  </span>
+                </HoverBorderGradient>
+              </button>
+
+              {isError && (
+                <p className="text-red-500 text-xs text-center">
+                  Failed to send message. Please check your connection.
+                </p>
+              )}
             </form>
           </DialogContent>
         </Dialog>

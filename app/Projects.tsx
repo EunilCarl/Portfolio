@@ -1,76 +1,117 @@
 "use client";
+
 import React from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
-import { ProjectsBG } from "./ProjectsBG"; 
+import { ProjectsBG } from "./ProjectsBG";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Projects() {
   const projects = [
     {
       title: "Mass Guide Web App",
-      description: "A web application to guide users, built with Next.js and Supabase.",
-      imageUrl: "favicon.svg", 
+      description:
+        "A progressive web application engineered to digitize liturgical guides, featuring real-time database synchronization via Supabase and a highly optimized Next.js frontend for instant page loads.",
+      imageUrl: "/favicon.svg",
       link: "#",
-
+      tags: ["Next.js", "Supabase", "Tailwind"],
+      year: "2024",
     },
     {
-      title: "BPSU Bulletin Logo",
-      description: "Logo and branding design for a university publication.",
-      imageUrl: "favicon.svg", 
+      title: "BPSU Bulletin Identity",
+      description:
+        "A strategic visual identity system developed for the university's official student publication, incorporating modern vector aesthetics while preserving institutional heritage across digital and print media.",
+      imageUrl: "/favicon.svg",
       link: "#",
+      tags: ["Branding", "Vector Design", "Typography"],
+      year: "2023",
     },
   ];
 
   return (
-    <div className="relative w-full py-20">
-      
+    <section className="relative w-full py-20 overflow-hidden">
       <ProjectsBG />
 
-      <div className="relative z-10 container mx-auto max-w-6xl px-6">
-        <h2 className="mb-12 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-3xl font-bold text-transparent md:text-5xl">
-          Recent Projects
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="relative z-10 container mx-auto max-w-7xl px-6 md:px-12">
+        <div className="mb-20 max-w-2xl">
+          <h3 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+            My <span className="text-yellow-300">Projects</span>
+          </h3>
+          <p className="text-zinc-400 text-lg leading-relaxed">
+            A glimpse into my recent digital explorations, ranging from full-stack web applications to strategic visual identity systems.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {projects.map((project, i) => (
-            <a
+            <Link
               href={project.link}
               key={i}
-              className="group relative block w-full overflow-hidden rounded-xl border border-neutral-700/80 bg-neutral-900/60 p-4 shadow-xl shadow-black/20 backdrop-blur-md transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
+              className="group relative flex flex-col h-full"
             >
-              <img
-                src={project.imageUrl}
-                alt={project.title}
-                className="w-full h-auto rounded-lg object-cover aspect-video"
-              />
-              <div className="mt-4">
-                <h3 className="text-lg font-semibold text-neutral-100">
-                  {project.title}
-                </h3>
-                <p className="mt-1 text-sm text-neutral-300">
-                  {project.description}
-                </p>
+              <div className="relative w-full aspect-[16/10] overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900/50 mb-6 group-hover:border-zinc-600 transition-colors duration-500">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+                
+                <Image
+                  src={project.imageUrl}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+
+                <div className="absolute top-6 right-6 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                  <div className="h-10 w-10 rounded-full bg-white text-black flex items-center justify-center shadow-xl">
+                    <ArrowUpRight className="h-5 w-5" />
+                  </div>
+                </div>
+
+                <div className="absolute top-6 left-6 z-20">
+                  <span className="px-3 py-1 rounded-full bg-black/50 border border-zinc-700 backdrop-blur-md text-xs font-medium text-zinc-300">
+                    {project.year}
+                  </span>
+                </div>
               </div>
 
-              <div className="absolute top-4 right-4 flex h-8 w-8 items-center justify-center rounded-full bg-neutral-800/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <ArrowRight className="h-4 w-4 text-white" />
+              <div className="flex flex-col flex-grow">
+                <div className="flex items-start justify-between mb-3">
+                  <h3 className="text-2xl font-bold text-white group-hover:text-zinc-300 transition-colors">
+                    {project.title}
+                  </h3>
+                </div>
+                
+                <p className="text-zinc-400 leading-relaxed mb-6 flex-grow">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag, t) => (
+                    <span
+                      key={t}
+                      className="px-3 py-1 rounded-full text-xs font-medium bg-zinc-900 border border-zinc-800 text-zinc-400"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
 
-        <div className="mt-16 flex w-full justify-center">
-          <HoverBorderGradient
-            containerClassName="rounded-full"
-            as="a" 
-            className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 px-6 py-3"
-          >
-            <Link href="/all-projects">View All Projects</Link>
-            <ArrowRight className="ml-1 h-4 w-4" />
-          </HoverBorderGradient>
+        <div className="mt-24 flex w-full justify-center">
+          <Link href="/all-projects">
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              as="div"
+              className="bg-black text-white flex items-center space-x-3 px-8 py-3"
+            >
+              <span className="text-base font-medium">All Projects</span>
+              <ArrowRight className="h-4 w-4" />
+            </HoverBorderGradient>
+          </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

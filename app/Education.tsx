@@ -1,6 +1,6 @@
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
-import { HoverBorderGradient } from "@/components/ui/hover-border-gradient"; // <-- Import added
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient"; 
 
 export function Education() {
   const data = [
@@ -11,7 +11,7 @@ export function Education() {
             <img
               src="heroes.png"
               alt="Bataan Heroes College Logo"
-              className="h-50 w-50 rounded-full object-contain mb-3 p-1" // Rounded, contained, and with a white bg
+              className="h-50 w-50 rounded-full object-contain mb-3 p-1" 
             />
           <h3 className="mb-1 text-lg font-semibold text-black dark:text-white">
             Bataan Heroes College
@@ -52,9 +52,7 @@ export function Education() {
             web architecture, system design, and AI, building on my SHS foundation.
           </p>
 
-          {/* Grouped the badge and logo together */}
           <div className="flex flex-wrap items-center gap-4 mt-4">
-            {/* Replaced <span> badge with HoverBorderGradient */}
             <HoverBorderGradient
               containerClassName="rounded-full"
               as="div"
@@ -62,8 +60,6 @@ export function Education() {
             >
               <span>BS Computer Science</span>
             </HoverBorderGradient>
-
-            {/* Kept your BPSU image, but styled it as a logo */}
           </div>
         </div>
       ),
@@ -71,7 +67,7 @@ export function Education() {
   ];
 
   return (
-    <div className="relative w-full overflow-clip"> {/* Added some padding/max-width */}
+    <div className="relative w-full overflow-clip"> 
       <Timeline data={data} />
     </div>
   );

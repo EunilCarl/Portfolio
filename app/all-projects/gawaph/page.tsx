@@ -6,37 +6,37 @@ import Image from "next/image";
 import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
-export default function UniTrackProjectPage() {
+export default function GawaPHProjectPage() {
   const project = {
-    title: "UniTrack",
-    subtitle: "Lost & Found Ecosystem",
+    title: "GawaPH",
+    subtitle: "Freelance Job Portal",
     description:
-      "UniTrack is an app designed for Bataan Peninsula State University (BPSU) students and faculty to report and recover lost or found items on campus.",
+      "GawaPH is a local freelance marketplace designed to connect clients and freelancers across the Philippines through a modern, fast, and secure platform.",
     liveSite: "",
-    repo: "w",
-    categories: ["Startup", "Full-Stack", "Mobile App"],
+    repo: "https://github.com/EunilCarl/GawaPH",
+    categories: ["Startup", "Full-Stack", "Web App"],
     tech: [
-      { name: "Android", icon: "/icons/android.svg" },
-      { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
-      { name: "OSMDroid", icon: "/icons/osmdroid.svg" },
-      { name: "Java", icon: "/icons/java.svg" },
+      { name: "ASP.NET MVC", icon: "/icons/dotnet.svg" },
+      { name: "Supabase", icon: "/icons/supabase.svg" },
+      { name: "PostgreSQL", icon: "/icons/postgresql.svg" },
+      { name: "C#", icon: "/icons/csharp.svg" },
     ],
     status: "Completed",
     contributors: [
       {
         name: "Eunil Carl Dela Cruz",
-        roles: ["Founder", "Lead Programmer", "UI/UX Designer"],
+        roles: ["Founder", "Full-Stack Developer", "UI/UX Designer"],
         avatar: "https://ik.imagekit.io/6j61dmdpg/Contributors/Image%20(9).png",
       },
     ],
-    timeline: "May 2025 - June 2025",
-    image: "/unitrack.png",
+    timeline: "Feb 2025 - May 2025",
+    image: "/gawaph.png",
     story:
-      "UniTrack was created to solve the common problem of lost and found items on the BPSU campus. The project started from a personal experience of losing an important item and the frustration of searching through your item multiple times. The development process began with mapping out the entire user journey — from reporting lost or found items to successful recovery. We focused on creating a simple, user-friendly mobile app tailored to students and faculty. Technically, the biggest challenge was integrating OSMDroid for an interactive, offline-capable campus map that shows where items were reported.",
+      "GawaPH was created to help Filipino freelancers find trustworthy, local opportunities without the barriers of international platforms. The project began by identifying common pain points such as client authenticity, project visibility, and lack of localized tools. Using ASP.NET MVC and Supabase, the platform features project posting, profile creation, media uploads, and secure authentication. The main challenge was integrating Supabase storage and database with ASP.NET while maintaining smooth developer workflow and consistent schema validation.",
     progressImages: [
-      "/projects/unitrack-wireframe.png",
-      "/projects/unitrack-backend.png",
-      "/projects/unitrack-alpha.png",
+      "/projects/gawaph-wireframe.png",
+      "/projects/gawaph-backend.png",
+      "/projects/gawaph-ui.png",
     ],
   };
 
@@ -161,7 +161,7 @@ export default function UniTrackProjectPage() {
                         !project.repo ? "opacity-50 cursor-not-allowed" : ""
                       }`}
                       as="button"
-                      className="bg-zinc-900 text-zinc-300 flex items-center space-x-2 px-6 py-3"
+                      className="bg-zinc-900 cursor-pointer text-zinc-300 flex items-center space-x-2 px-6 py-3"
                     >
                       <i className="fab fa-github text-xl" />
                       <span>Source Code</span>
@@ -278,17 +278,11 @@ export default function UniTrackProjectPage() {
           <section className="relative border-t border-zinc-800 pt-20">
             <div className="grid lg:grid-cols-12 gap-12">
               <div className="lg:col-span-4">
-                <h2 className="text-3xl font-bold mb-6 text-white">
-                  How it&apos;s Made
-                </h2>
+                <h2 className="text-3xl font-bold mb-6 text-white">How it&apos;s Made</h2>
                 <div className="h-1 w-20 bg-gradient-to-r from-yellow-500 to-transparent mb-8" />
-                <p className="text-zinc-400 leading-loose text-lg">
-                  {project.story}
-                </p>
+                <p className="text-zinc-400 leading-loose text-lg">{project.story}</p>
                 <div className="mt-8 p-4 bg-zinc-900/30 border-l-2 border-yellow-500">
-                  <p className="text-zinc-500 text-sm italic">
-                    Timeline: {project.timeline}
-                  </p>
+                  <p className="text-zinc-500 text-sm italic">Timeline: {project.timeline}</p>
                 </div>
               </div>
 
@@ -302,11 +296,10 @@ export default function UniTrackProjectPage() {
                       className="object-cover hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                      <span className="text-xs font-mono text-zinc-300">
-                        Phase 1: Wireframing
-                      </span>
+                      <span className="text-xs font-mono text-zinc-300">Phase 1: Wireframing</span>
                     </div>
                   </div>
+
                   <div className="relative rounded-2xl overflow-hidden border border-zinc-800 h-64">
                     <Image
                       src={project.progressImages[1]}
@@ -315,11 +308,10 @@ export default function UniTrackProjectPage() {
                       className="object-cover hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                      <span className="text-xs font-mono text-zinc-300">
-                        Phase 2: Backend Logic
-                      </span>
+                      <span className="text-xs font-mono text-zinc-300">Phase 2: Backend Logic</span>
                     </div>
                   </div>
+
                   <div className="relative rounded-2xl overflow-hidden border border-zinc-800 h-64">
                     <Image
                       src={project.progressImages[2]}
@@ -328,9 +320,7 @@ export default function UniTrackProjectPage() {
                       className="object-cover hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                      <span className="text-xs font-mono text-zinc-300">
-                        Phase 3: UI Polish
-                      </span>
+                      <span className="text-xs font-mono text-zinc-300">Phase 3: UI Polish</span>
                     </div>
                   </div>
                 </div>

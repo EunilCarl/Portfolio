@@ -1,11 +1,8 @@
 "use client";
 import React from "react";
-// Image import is no longer needed if you're not using the <Image> component
-// import Image from "next/image"; 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import ProfileCard from "./profile_card";
+import ProfileCard from "./ProfileCard";
 
-// Helper component for the technology pills
 const TechPill = ({ name, className }: { name: string, className: string }) => (
   <span
     className={`rounded-full border px-3 py-1 text-xs font-semibold ${className}`}

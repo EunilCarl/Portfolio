@@ -27,7 +27,6 @@ export default function ProfileCard() {
             </div>
           </div>
 
-          {/* Info Section */}
           <div className="mt-4 flex flex-col items-center justify-center px-2 text-white">
             <h2 className="bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-lg font-semibold text-transparent">
               Eunil Carl L. Dela Cruz
