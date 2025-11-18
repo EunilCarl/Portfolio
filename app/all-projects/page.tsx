@@ -23,7 +23,7 @@ export default function AllProjects() {
       subtitle: "Freelance Job Portal",
       description:
         "A freelance marketplace for local communities built using ASP.NET MVC + Supabase.",
-      image: "/favicon.svg",
+      image: "/gawaph.png",
       tech: ["ASP.NET", "Supabase", "MVC"],
       link: "/all-projects/gawaph",
     },
@@ -50,7 +50,7 @@ export default function AllProjects() {
       subtitle: "Freelance Job Portal",
       description:
         "A freelance marketplace for local communities built using ASP.NET MVC + Supabase.",
-      image: "/favicon.svg",
+      image: "/gawaph.png",
       tech: ["ASP.NET", "Supabase", "MVC"],
       link: "/all-projects/gawaph",
     },
