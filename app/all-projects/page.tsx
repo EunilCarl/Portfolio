@@ -10,6 +10,25 @@ import { PointerHighlight } from "@/components/ui/pointer-highlight";
 export default function AllProjects() {
   const projects = [
     {
+      title: "Blocktopia Wiki",
+      subtitle: "Roblox Game Wiki",
+      description:
+        "A comprehensive wiki platform inspired by Growtopia and built within Roblox, designed to provide detailed game guides, community resources, and collaborative content creation.",
+      image: "/blocktopia.png",
+      tech: ["Roblox", "Wiki", "Game Guides"],
+      link: "/all-projects/blocktopia-wiki",
+      monthlyVisits: 1500,
+    },
+    {
+      title: "BPSU Bulletin",
+      subtitle: "Student Announcement System",
+      description:
+        "A centralized announcement system for students at BPSU, streamlining communication and updates across the campus through a user-friendly digital platform.",
+      image: "/bpsubulletin.png",
+      tech: ["Announcements", "Student Portal", "Communication"],
+      link: "/all-projects/bpsu-bulletin",
+    },
+    {
       title: "UniTrack",
       subtitle: "Lost & Found App",
       description:
@@ -28,40 +47,13 @@ export default function AllProjects() {
       link: "/all-projects/gawaph",
     },
     {
-      title: "Levenshtein Viz",
-      subtitle: "Algorithm Visualizer",
+      title: "Unil Portfolio",
+      subtitle: "Personal Portfolio Website",
       description:
-        "Interactive visualization tool for edit distance algorithm with animations.",
+        "A clean and modern portfolio website showcasing projects, skills, and professional background.",
       image: "/favicon.svg",
-      tech: ["React", "Framer Motion", "TypeScript"],
-      link: "/all-projects/levenshtein",
-    },
-    {
-      title: "UniTrack",
-      subtitle: "Lost & Found App",
-      description:
-        "A university lost & found system with maps, posting, and real-time updates.",
-      image: "/favicon.svg",
-      tech: ["Android", "Firebase", "OSMDroid"],
-      link: "/all-projects/unitrack",
-    },
-    {
-      title: "GawaPH",
-      subtitle: "Freelance Job Portal",
-      description:
-        "A freelance marketplace for local communities built using ASP.NET MVC + Supabase.",
-      image: "/gawaph.png",
-      tech: ["ASP.NET", "Supabase", "MVC"],
-      link: "/all-projects/gawaph",
-    },
-    {
-      title: "Levenshtein Viz",
-      subtitle: "Algorithm Visualizer",
-      description:
-        "Interactive visualization tool for edit distance algorithm with animations.",
-      image: "/favicon.svg",
-      tech: ["React", "Framer Motion", "TypeScript"],
-      link: "/all-projects/levenshtein",
+      tech: ["Next.js", "Tailwind CSS", "React"],
+      link: "/all-projects/unil-portfolio",
     },
   ];
 
@@ -92,7 +84,7 @@ export default function AllProjects() {
                 containerClassName="inline-block mr-2"
               >
                 <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-zinc-500">
-                Projects
+                  Projects
                 </span>
               </PointerHighlight>
             </h1>
@@ -107,7 +99,7 @@ export default function AllProjects() {
               <Link href={project.link} key={i} className="group block h-full">
                 <HoverBorderGradient
                   as="div"
-                  containerClassName="h-full rounded-3xl bg-zinc-900/20 backdrop-blur-sm"
+                  containerClassName="h-full rounded-3xl bg-zinc-900/20 backdrop-blur-sm relative"
                   className="flex flex-col h-full w-full p-6 md:p-8 bg-black/40"
                 >
                   <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border border-zinc-800 mb-8 group-hover:border-zinc-600 transition-colors">
@@ -119,7 +111,15 @@ export default function AllProjects() {
                       className="object-cover transform group-hover:scale-105 transition-transform duration-700"
                       priority={i < 2}
                     />
-                    <div className="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                    {project.monthlyVisits && (
+                      <span className="absolute top-4 right-4 z-20 inline-flex items-center gap-1 rounded-full bg-yellow-500/20 border border-yellow-500 text-yellow-400 px-3 py-1 text-xs font-semibold tracking-wide select-none whitespace-nowrap">
+                        <span className="material-symbols-outlined text-[16px]">
+                          trending_up
+                        </span>
+                        {project.monthlyVisits.toLocaleString()} Monthly Visits
+                      </span>
+                    )}
+                    <div className="absolute top-4 right-16 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
                       <div className="bg-white text-black p-2 rounded-full flex items-center justify-center shadow-lg">
                         <span className="material-symbols-outlined text-[20px]">
                           arrow_outward

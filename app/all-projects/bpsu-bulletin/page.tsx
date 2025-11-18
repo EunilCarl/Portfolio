@@ -6,52 +6,56 @@ import Image from "next/image";
 import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
-export default function GawaPHProjectPage() {
+export default function BPSUBulletinProjectPage() {
   const project = {
-    title: "GawaPH",
-    subtitle: "Freelance Job Portal",
+    title: "BPSU Bulletin",
+    subtitle: "Student Announcement System",
     description:
-      "GawaPH is a local freelance marketplace designed to connect clients and freelancers across the Philippines through a modern, fast, and secure platform.",
-    liveSite: "",
-    repo: "https://github.com/EunilCarl/GawaPH",
+      "A centralized announcement platform for Bataan Peninsula State University (BPSU) students and faculty to access timely updates, news, and campus-wide notifications through a clean and user-friendly digital interface.",
+    liveSite: "https://bpsu-bulletin.gamer.gd/",
+    repo: "",
     categories: ["Startup", "Full-Stack", "Web App"],
     tech: [
-      { name: "ASP.NET MVC", icon: "/icons/dotnet.svg" },
-      { name: "Supabase", icon: "/icons/supabase.svg" },
-      { name: "PostgreSQL", icon: "/icons/postgresql.svg" },
-      { name: "C#", icon: "/icons/csharp.svg" },
+      { name: "PHP", icon: "/icons/nextjs.svg" },
+      { name: "MySQL", icon: "/icons/tailwind.svg" },
+      { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
     ],
     status: "Completed",
-    contributors: [
-        {
-        name: "Eunil Carl Dela Cruz",
-        roles: ["Project Leader", "Full-Stack Developer", "UI/UX Designer"],
+   contributors: [
+    {
+        name: "Ruzzel P. Mendoza",
+        roles: ["Project Leader", "Backend Developer"],
+        avatar: "https://ik.imagekit.io/6j61dmdpg/Contributors/ruzzel.png",
+    },
+    {
+        name: "Eunil Carl L. Dela Cruz",
+        roles: ["UI/UX Designer", "Frontend Developer"],
         avatar: "https://ik.imagekit.io/6j61dmdpg/Contributors/Image%20(9).png",
-        },
-        {
-        name: "Kyle Marion Cenon Sabado",
-        roles: ["Lead Backend Engineer", "API Architect"],
-        avatar: "https://ik.imagekit.io/6j61dmdpg/Avatar/kyle.webp",
-        },
-        {
-        name: "Godson Duhaylungsod",
-        roles: ["Lead Frontend Engineer", "UI/UX Designer"],
-        avatar: "https://ik.imagekit.io/6j61dmdpg/Avatar/godson.webp",
-        },
-        {
-        name: "Josiah Timbang",
-        roles: ["QA Lead", "Assistant Programmer"],
-        avatar: "https://ik.imagekit.io/6j61dmdpg/Avatar/josiah.webp",
-        },
+    },
+    {
+        name: "Nathaniel D. Sto Niño",
+        roles: ["UI/UX Designer", "Frontend Developer"],
+        avatar: "https://ik.imagekit.io/6j61dmdpg/Contributors/nathaniel.png",
+    },
+    {
+        name: "Tricia Lei B. Alburo",
+        roles: ["System Integrator", "Assistant Developer"],
+        avatar: "https://ik.imagekit.io/6j61dmdpg/Contributors/tricia.png",
+    },
+    {
+        name: "QA Tester / Documentation Specialist",
+        roles: [],
+        avatar: "https://ik.imagekit.io/6j61dmdpg/Contributors/qa_tester.png",
+    },
     ],
-    timeline: "Feb 2025 - May 2025",
-    image: "/gawaph.png",
+    timeline: "January 2024 - March 2024",
+    image: "/bpsubulletin.png",
     story:
-      "GawaPH was created to help Filipino freelancers find trustworthy, local opportunities without the barriers of international platforms. The project began by identifying common pain points such as client authenticity, project visibility, and lack of localized tools. Using ASP.NET MVC and Supabase, the platform features project posting, profile creation, media uploads, and secure authentication. The main challenge was integrating Supabase storage and database with ASP.NET while maintaining smooth developer workflow and consistent schema validation.",
+      "BPSU Bulletin was created to address the need for a streamlined communication system on campus. The platform consolidates announcements from different departments into one accessible hub, reducing information fragmentation and increasing student engagement. The development focused on responsive design, real-time updates, and ease of use for both admins and users.",
     progressImages: [
-      "/projects/gawaph-wireframe.png",
-      "/projects/gawaph-backend.png",
-      "/projects/gawaph-ui.png",
+      "/projects/bpsu-wireframe.png",
+      "/projects/bpsu-backend.png",
+      "/projects/bpsu-ui.png",
     ],
   };
 
@@ -176,7 +180,7 @@ export default function GawaPHProjectPage() {
                         !project.repo ? "opacity-50 cursor-not-allowed" : ""
                       }`}
                       as="button"
-                      className="bg-zinc-900 cursor-pointer text-zinc-300 flex items-center space-x-2 px-6 py-3"
+                      className="bg-zinc-900 text-zinc-300 flex items-center space-x-2 px-6 py-3"
                     >
                       <i className="fab fa-github text-xl" />
                       <span>Source Code</span>
@@ -293,11 +297,17 @@ export default function GawaPHProjectPage() {
           <section className="relative border-t border-zinc-800 pt-20">
             <div className="grid lg:grid-cols-12 gap-12">
               <div className="lg:col-span-4">
-                <h2 className="text-3xl font-bold mb-6 text-white">How it&apos;s Made</h2>
+                <h2 className="text-3xl font-bold mb-6 text-white">
+                  How it&apos;s Made
+                </h2>
                 <div className="h-1 w-20 bg-gradient-to-r from-yellow-500 to-transparent mb-8" />
-                <p className="text-zinc-400 leading-loose text-lg">{project.story}</p>
+                <p className="text-zinc-400 leading-loose text-lg">
+                  {project.story}
+                </p>
                 <div className="mt-8 p-4 bg-zinc-900/30 border-l-2 border-yellow-500">
-                  <p className="text-zinc-500 text-sm italic">Timeline: {project.timeline}</p>
+                  <p className="text-zinc-500 text-sm italic">
+                    Timeline: {project.timeline}
+                  </p>
                 </div>
               </div>
 
@@ -311,10 +321,11 @@ export default function GawaPHProjectPage() {
                       className="object-cover hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                      <span className="text-xs font-mono text-zinc-300">Phase 1: Wireframing</span>
+                      <span className="text-xs font-mono text-zinc-300">
+                        Phase 1: Wireframing
+                      </span>
                     </div>
                   </div>
-
                   <div className="relative rounded-2xl overflow-hidden border border-zinc-800 h-64">
                     <Image
                       src={project.progressImages[1]}
@@ -323,10 +334,11 @@ export default function GawaPHProjectPage() {
                       className="object-cover hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                      <span className="text-xs font-mono text-zinc-300">Phase 2: Backend Logic</span>
+                      <span className="text-xs font-mono text-zinc-300">
+                        Phase 2: Backend Logic
+                      </span>
                     </div>
                   </div>
-
                   <div className="relative rounded-2xl overflow-hidden border border-zinc-800 h-64">
                     <Image
                       src={project.progressImages[2]}
@@ -335,7 +347,9 @@ export default function GawaPHProjectPage() {
                       className="object-cover hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                      <span className="text-xs font-mono text-zinc-300">Phase 3: UI Polish</span>
+                      <span className="text-xs font-mono text-zinc-300">
+                        Phase 3: UI Polish
+                      </span>
                     </div>
                   </div>
                 </div>

@@ -10,23 +10,24 @@ import Image from "next/image";
 export function Projects() {
   const projects = [
     {
-      title: "Mass Guide Web App",
-      description:
-        "A progressive web application engineered to digitize liturgical guides, featuring real-time database synchronization via Supabase and a highly optimized Next.js frontend for instant page loads.",
-      imageUrl: "/favicon.svg",
-      link: "#",
-      tags: ["Next.js", "Supabase", "Tailwind"],
-      year: "2024",
-    },
-    {
-      title: "BPSU Bulletin Identity",
-      description:
-        "A strategic visual identity system developed for the university's official student publication, incorporating modern vector aesthetics while preserving institutional heritage across digital and print media.",
-      imageUrl: "/favicon.svg",
-      link: "#",
-      tags: ["Branding", "Vector Design", "Typography"],
-      year: "2023",
-    },
+  title: "Blocktopia Wiki",
+  description:
+    "A comprehensive wiki platform inspired by Growtopia and built within Roblox, designed to provide detailed game guides, community resources, and collaborative content creation.",
+  imageUrl: "/blocktopia.png",
+  link: "/all-projects/blocktopia-wiki",
+  tags: ["Roblox", "Wiki", "Game Guides"],
+  year: "May 2025",
+},
+{
+  title: "BPSU Bulletin",
+  description:
+    "A centralized announcement system for students at BPSU, streamlining communication and updates across the campus through a user-friendly digital platform.",
+  imageUrl: "/bpsubulletin.png",
+  link: "/all-projects/bpsu-bulletin",
+  tags: ["Announcements", "Student Portal", "Communication"],
+  year: "Sep 2025",
+},
+
   ];
 
   return (
@@ -57,7 +58,7 @@ export function Projects() {
                   src={project.imageUrl}
                   alt={project.title}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-obtain transition-transform duration-700 group-hover:scale-105"
                 />
 
                 <div className="absolute top-6 right-6 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
