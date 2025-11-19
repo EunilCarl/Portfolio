@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 
 export default function BPSUBulletinProjectPage() {
   const project = {
@@ -15,17 +16,12 @@ export default function BPSUBulletinProjectPage() {
     liveSite: "https://bpsu-bulletin.gamer.gd/",
     repo: "",
     categories: ["Startup", "Full-Stack", "Web App"],
-    tech: [
-      { name: "PHP", icon: "/icons/nextjs.svg" },
-      { name: "MySQL", icon: "/icons/tailwind.svg" },
-      { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
-    ],
     status: "Completed",
    contributors: [
     {
         name: "Ruzzel P. Mendoza",
         roles: ["Project Leader", "Backend Developer"],
-        avatar: "https://ik.imagekit.io/6j61dmdpg/Contributors/ruzzel.png",
+        avatar: "https://ik.imagekit.io/6j61dmdpg/Avatar/ruzz.png",
     },
     {
         name: "Eunil Carl L. Dela Cruz",
@@ -33,22 +29,18 @@ export default function BPSUBulletinProjectPage() {
         avatar: "https://ik.imagekit.io/6j61dmdpg/Contributors/Image%20(9).png",
     },
     {
-        name: "Nathaniel D. Sto Niño",
-        roles: ["UI/UX Designer", "Frontend Developer"],
-        avatar: "https://ik.imagekit.io/6j61dmdpg/Contributors/nathaniel.png",
-    },
-    {
         name: "Tricia Lei B. Alburo",
-        roles: ["System Integrator", "Assistant Developer"],
-        avatar: "https://ik.imagekit.io/6j61dmdpg/Contributors/tricia.png",
+        roles: ["QA Tester", "Documentation Specialist"],
+        avatar: "https://ik.imagekit.io/6j61dmdpg/Avatar/leis.png?updatedAt=1763562701826",
     },
     {
-        name: "QA Tester / Documentation Specialist",
-        roles: [],
-        avatar: "https://ik.imagekit.io/6j61dmdpg/Contributors/qa_tester.png",
+        name: "Nathaniel D. Sto Niño",
+        roles: ["System Integrator", "Assistant Developer"],
+        avatar: "https://ik.imagekit.io/6j61dmdpg/Avatar/nat.png",
     },
+    
     ],
-    timeline: "January 2024 - March 2024",
+    timeline: "October 2025 - November 2025",
     image: "/bpsubulletin.png",
     story:
       "BPSU Bulletin was created to address the need for a streamlined communication system on campus. The platform consolidates announcements from different departments into one accessible hub, reducing information fragmentation and increasing student engagement. The development focused on responsive design, real-time updates, and ease of use for both admins and users.",
@@ -58,6 +50,58 @@ export default function BPSUBulletinProjectPage() {
       "/projects/bpsu-ui.png",
     ],
   };
+
+  const techStacks = [
+  // Front-End
+  {
+    id: 1,
+    name: "HTML5",
+    designation: "Front-End",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  },
+  {
+    id: 2,
+    name: "CSS3",
+    designation: "Front-End",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  },
+  {
+    id: 3,
+    name: "JavaScript",
+    designation: "Front-End",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  },
+  {
+    id: 5,
+    name: "Tailwind CSS",
+    designation: "Libraries",
+    image: "https://scontent.fsfs1-1.fna.fbcdn.net/v/t39.30808-6/299463877_560030875914611_8025210373789510385_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGDrc_rwHDv0T8AugwyGK2oXyjiulHN1tJfKOK6Uc3W0ow4wxBSsqDdtnpRd4nkTnbn41vMc2m-XGso71i3D7lc&_nc_ohc=1hwpGnExzvYQ7kNvwFddaFo&_nc_oc=AdmrQ-qvsa2YOjPg9X2jgZ4zP3WB6ZWK6ConrJdP3BRj5oRV4nbAqMDacAifkH7NQdQ&_nc_zt=23&_nc_ht=scontent.fsfs1-1.fna&_nc_gid=O7micju6hZvUkEadCz860Q&oh=00_Afgbfrz0HF-a8DGLgLHpHchYfiQwyxdhxEejmWkDTGTBMw&oe=691D49B7"
+  },
+  {
+    id: 12,
+    name: "PHP",
+    designation: "Back-End",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+  },
+  {
+    id: 10,
+    name: "MySQL",
+    designation: "Database",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  },
+  {
+    id: 11,
+    name: "Git",
+    designation: "Tools",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  },
+  {
+    id: 13,
+    name: "Figma",
+    designation: "Tools",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+  },
+];
 
   const statusColor =
     project.status === "Completed"
@@ -211,25 +255,9 @@ export default function BPSUBulletinProjectPage() {
                 <h3 className="text-sm font-semibold text-zinc-500 uppercase tracking-widest mb-4">
                   Built With
                 </h3>
-                <div className="flex flex-wrap gap-6">
-                  {project.tech.map(({ name, icon }, i) => (
-                    <div
-                      key={i}
-                      className="group flex flex-col items-center gap-2"
-                      title={name}
-                    >
-                      <div className="p-3 rounded-xl bg-zinc-900/50 border border-zinc-800 group-hover:border-zinc-600 transition-colors">
-                        <Image
-                          src={icon}
-                          alt={name}
-                          width={24}
-                          height={24}
-                          className="opacity-70 group-hover:opacity-100 transition-opacity"
-                        />
+                <div className="flex flex-row flex-wrap items-center justify-center gap-2 mb-16 w-full max-w-4xl ">
+                        <AnimatedTooltip items={techStacks} />
                       </div>
-                    </div>
-                  ))}
-                </div>
               </div>
             </div>
 
@@ -297,63 +325,12 @@ export default function BPSUBulletinProjectPage() {
           <section className="relative border-t border-zinc-800 pt-20">
             <div className="grid lg:grid-cols-12 gap-12">
               <div className="lg:col-span-4">
-                <h2 className="text-3xl font-bold mb-6 text-white">
-                  How it&apos;s Made
-                </h2>
-                <div className="h-1 w-20 bg-gradient-to-r from-yellow-500 to-transparent mb-8" />
-                <p className="text-zinc-400 leading-loose text-lg">
-                  {project.story}
-                </p>
                 <div className="mt-8 p-4 bg-zinc-900/30 border-l-2 border-yellow-500">
                   <p className="text-zinc-500 text-sm italic">
                     Timeline: {project.timeline}
                   </p>
                 </div>
-              </div>
-
-              <div className="lg:col-span-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="md:row-span-2 relative rounded-2xl overflow-hidden border border-zinc-800 h-full min-h-[300px]">
-                    <Image
-                      src={project.progressImages[0]}
-                      alt="Wireframing process"
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                      <span className="text-xs font-mono text-zinc-300">
-                        Phase 1: Wireframing
-                      </span>
-                    </div>
-                  </div>
-                  <div className="relative rounded-2xl overflow-hidden border border-zinc-800 h-64">
-                    <Image
-                      src={project.progressImages[1]}
-                      alt="Backend Development"
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                      <span className="text-xs font-mono text-zinc-300">
-                        Phase 2: Backend Logic
-                      </span>
-                    </div>
-                  </div>
-                  <div className="relative rounded-2xl overflow-hidden border border-zinc-800 h-64">
-                    <Image
-                      src={project.progressImages[2]}
-                      alt="Final Polish"
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                      <span className="text-xs font-mono text-zinc-300">
-                        Phase 3: UI Polish
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </div>    
             </div>
           </section>
         </div>

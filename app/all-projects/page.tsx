@@ -20,6 +20,15 @@ export default function AllProjects() {
       monthlyVisits: 1500,
     },
     {
+      title: "Unil Portfolio",
+      subtitle: "Personal Portfolio Website",
+      description:
+        "A clean and modern portfolio website showcasing projects, skills, and professional background.",
+      image: "/unil.png",
+      tech: ["Next.js", "Tailwind CSS", "React"],
+      link: "/all-projects/unil-portfolio",
+    },
+    {
       title: "BPSU Bulletin",
       subtitle: "Student Announcement System",
       description:
@@ -45,15 +54,6 @@ export default function AllProjects() {
       image: "/gawaph.png",
       tech: ["ASP.NET", "Supabase", "MVC"],
       link: "/all-projects/gawaph",
-    },
-    {
-      title: "Unil Portfolio",
-      subtitle: "Personal Portfolio Website",
-      description:
-        "A clean and modern portfolio website showcasing projects, skills, and professional background.",
-      image: "/favicon.svg",
-      tech: ["Next.js", "Tailwind CSS", "React"],
-      link: "/all-projects/unil-portfolio",
     },
   ];
 

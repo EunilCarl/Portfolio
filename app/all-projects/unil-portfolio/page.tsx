@@ -7,105 +7,122 @@ import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 
-export default function BlocktopiaWikiProjectPage() {
+export default function EunilCarlPortfolioPage() {
   const project = {
-    title: "Blocktopia Wiki",
-    subtitle: "Roblox Game Wiki",
+    title: "Unil Portfolio",
+    subtitle: "Creative Developer Showcase",
     description:
-      "A comprehensive wiki platform inspired by Growtopia and built within Roblox, designed to provide detailed game guides, community resources, and collaborative content creation. Currently attracting 1,500+ monthly visitors, fostering a growing, engaged Roblox gaming community.",
-    liveSite: "https://blocktopia-wiki.vercel.app/",
-    repo: "https://github.com/EunilCarl/BlocktopiaWiki",
-    categories: ["Community", "Game Wiki", "Roblox"],
-    status: "Ongoing",
+      "A modern, high-performance personal portfolio designed to showcase my journey as a Full-Stack Developer and UI/UX Designer. Built with the latest web technologies, it features fluid animations, a bento-grid layout, and a unique visual identity that reflects my personal brand.",
+    liveSite: "https://eunil-carl.vercel.app/",
+    repo: "https://github.com/EunilCarl/Portfolio",
+    categories: ["Personal", "Portfolio", "Creative Dev"],
+    status: "In Progress",
     contributors: [
       {
-        name: "Eunil Carl Dela Cruz",
-        roles: ["Founder", "Lead Programmer", "UI/UX Designer"],
+        name: "Eunil Carl L. Dela Cruz",
+        roles: ["Owner", "Full-Stack Developer", "UI/UX Designer"],
         avatar: "https://ik.imagekit.io/6j61dmdpg/Contributors/Image%20(9).png",
       },
     ],
-    timeline: "May 2025 - Present",
-    image: "/blocktopia.png",
+    timeline: "October 2025 - November 2025",
+    image: "/unil.png",
     story:
-      "Blocktopia Wiki was created to support the Roblox community by providing an extensive, easy-to-navigate resource hub for the popular game Blocktopia. The project focuses on collaborative content creation and real-time updates to keep the wiki accurate and engaging. Key challenges included designing an intuitive UI for diverse user contributions and ensuring smooth integration with Roblox data APIs. The platform’s growing popularity is reflected in its steady 1,500+ monthly visitors, making it a key resource for the community.",
-    progressImages: [
-      "/projects/blocktopia-wireframe.png",
-      "/projects/blocktopia-backend.png",
-      "/projects/blocktopia-alpha.png",
+      "I built this portfolio to escape the limitations of standard templates. I wanted a platform where I could experiment with complex animations, 3D elements, and unconventional layouts without compromising performance. The core philosophy was 'content-first,' wrapping my projects in a dark, immersive interface that guides the user's focus.",
+    logoProcess: [
+      {
+        id: 1,
+        title: "Initial Sketches",
+        desc: "Exploring geometric shapes for 'U' and 'N'",
+        img: "https://ik.imagekit.io/6j61dmdpg/ProjectsImages/image.png",
+        className: "md:col-span-3 md:row-span-1 ",
+      },
+      {
+        id: 2,
+        title: "Unil Logo Drafts",
+        desc: "Getting ideas for the right logo",
+        img: "https://ik.imagekit.io/6j61dmdpg/ProjectsImages/drafts.png?updatedAt=1763568082768",
+        className: "md:col-span-1 md:row-span-2",
+      },
+      {
+        id: 3,
+        title: "Final Symbol",
+        desc: "The finalized monogram",
+        img: "/logo.svg",
+        className: "md:col-span-2 md:row-span-2",
+      },
     ],
-    monthlyVisitors: 1500,
-    vercelViewsImage: "https://ik.imagekit.io/6j61dmdpg/ProjectsBG/Screenshot%202025-11-19%20223737.png",
-    countriesGif: "https://ik.imagekit.io/6j61dmdpg/ProjectsBG/countries.gif",
   };
 
-  const techStacks = [
-    {
-      id: 7,
-      name: "HTML5",
-      designation: "Markup",
-      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-    },
-    {
-      id: 8,
-      name: "CSS3",
-      designation: "Styling",
-      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    },
-    {
-      id: 9,
-      name: "JavaScript",
-      designation: "Language",
-      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    },
-    {
-      id: 1,
-      name: "Next.js 14",
-      designation: "Framework",
-      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-    },
-    {
-      id: 2,
-      name: "React",
-      designation: "Library",
-      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    },
-    {
-      id: 4,
-      name: "Tailwind CSS",
-      designation: "Styling",
-      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-    },
-    {
-      id: 12,
-      name: "Supabase",
-      designation: "BaaS / Database",
-      image: "/supabase.svg",
-    },
-    {
-      id: 5,
-      name: "Framer Motion",
-      designation: "Animation",
-      image: "https://ik.imagekit.io/6j61dmdpg/logos/framer.svg",
-    },
-    {
-      id: 6,
-      name: "Figma",
-      designation: "Design",
-      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-    },
-    {
-      id: 10,
-      name: "Git",
-      designation: "VCS",
-      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-    },
-    {
-      id: 11,
-      name: "GitHub",
-      designation: "Hosting",
-      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-    },
-  ];
+const techStacks = [
+  {
+    id: 7,
+    name: "HTML5",
+    designation: "Markup",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  },
+  {
+    id: 8,
+    name: "CSS3",
+    designation: "Styling",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  },
+  {
+    id: 9,
+    name: "JavaScript",
+    designation: "Language",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  },
+  {
+    id: 1,
+    name: "Next.js 14",
+    designation: "Framework",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+  },
+  {
+    id: 2,
+    name: "React",
+    designation: "Library",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  },
+  {
+    id: 3,
+    name: "TypeScript",
+    designation: "Language",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  },
+  {
+    id: 4,
+    name: "Tailwind CSS",
+    designation: "Styling",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+  },
+  {
+    id: 5,
+    name: "Framer Motion",
+    designation: "Animation",
+    image: "https://ik.imagekit.io/6j61dmdpg/logos/framer.svg",
+  },
+  {
+    id: 6,
+    name: "Figma",
+    designation: "Design",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+  },
+  {
+    id: 10,
+    name: "Git",
+    designation: "VCS",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  },
+  {
+    id: 11,
+    name: "GitHub",
+    designation: "Hosting",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+  },
+];
+
+
 
   const statusColor =
     project.status === "Completed"
@@ -143,12 +160,6 @@ export default function BlocktopiaWikiProjectPage() {
                     {cat}
                   </span>
                 ))}
-                <span className="ml-auto inline-flex items-center gap-1 rounded-full bg-yellow-500/20 border border-yellow-500 text-yellow-400 px-3 py-1 text-xs font-semibold tracking-wide select-none">
-                  <span className="material-symbols-outlined text-[16px]">
-                    trending_up
-                  </span>
-                  1,500+ Monthly Visits
-                </span>
               </div>
 
               <h1 className="text-6xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-b from-white to-zinc-500">
@@ -234,7 +245,7 @@ export default function BlocktopiaWikiProjectPage() {
                         !project.repo ? "opacity-50 cursor-not-allowed" : ""
                       }`}
                       as="button"
-                      className="bg-zinc-900 text-zinc-300 flex items-center space-x-2 px-6 cursor-pointer py-3"
+                      className="bg-zinc-900 cursor-pointer text-zinc-300 flex items-center space-x-2 px-6 py-3"
                     >
                       <i className="fab fa-github text-xl" />
                       <span>Source Code</span>
@@ -266,8 +277,8 @@ export default function BlocktopiaWikiProjectPage() {
                   Built With
                 </h3>
                 <div className="flex flex-row flex-wrap items-center justify-center gap-2 mb-16 w-full max-w-4xl ">
-                  <AnimatedTooltip items={techStacks} />
-                </div>
+                        <AnimatedTooltip items={techStacks}/>
+                      </div>
               </div>
             </div>
 
@@ -332,44 +343,51 @@ export default function BlocktopiaWikiProjectPage() {
             </div>
           </div>
 
-          <section className="border-t border-zinc-800 pt-20">
-            <h2 className="text-3xl font-bold mb-8 text-white">
-              Analytics & Global Reach
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="group relative rounded-3xl border border-zinc-800 bg-zinc-900/20 overflow-hidden">
-                <div className="p-6">
-                  <h3 className="text-zinc-400 text-sm font-semibold uppercase tracking-widest mb-6">
-                    Total Traffic
-                  </h3>
-                  <div className="rounded-xl overflow-hidden border border-zinc-800/50 shadow-lg shadow-black/50">
-                    <Image
-                      src={project.vercelViewsImage}
-                      alt="Vercel Views Graph"
-                      width={600}
-                      height={500}
-                      className="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-500"
-                    />
-                  </div>
+          <section className="relative border-t border-zinc-800 pt-20">
+            <div className="grid lg:grid-cols-12 gap-12">
+              <div className="lg:col-span-4">
+                <h2 className="text-3xl font-bold mb-6 text-white">
+                  How it&apos;s Made
+                </h2>
+                <div className="h-1 w-20 bg-gradient-to-r from-yellow-500 to-transparent mb-8" />
+                <p className="text-zinc-400 leading-loose text-lg mb-8">
+                  {project.story}
+                </p>
+                
+                <div className="mb-10">
+                  <h3 className="text-xl font-bold text-zinc-200 mb-4">The Logo Concept</h3>
+                  <p className="text-zinc-400 leading-relaxed">
+                    I wanted a logo that felt architectural yet personal. I started by breaking down my initials, exploring how the curvature of 'U' could intersect with 'N' in a minimal, geometric grid. The final design uses negative space to create a symbol that represents both structure (code) and fluidity (design).
+                  </p>
+                </div>
+
+                <div className="mt-8 p-4 bg-zinc-900/30 border-l-2 border-yellow-500">
+                  <p className="text-zinc-500 text-sm italic">
+                    Timeline: {project.timeline}
+                  </p>
                 </div>
               </div>
 
-              <div className="group relative rounded-3xl border border-zinc-800 bg-zinc-900/20 overflow-hidden">
-                <div className="p-6">
-                  <h3 className="text-zinc-400 text-sm font-semibold uppercase tracking-widest mb-6">
-                    Visitor Locations
-                  </h3>
-                  <div className="rounded-xl overflow-hidden border border-zinc-800/50 shadow-lg shadow-black/50">
-                    <Image
-                      src={project.countriesGif}
-                      alt="Global Visitors Map"
-                      width={600}
-                      height={400}
-                      unoptimized
-                      priority
-                      className="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-500"
-                    />
-                  </div>
+              <div className="lg:col-span-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-3 md:grid-rows-3 gap-4 h-auto md:h-[600px]">
+                    {project.logoProcess.map((item) => (
+                        <div 
+                            key={item.id} 
+                            className={`relative rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/50 group ${item.className}`}
+                        >
+                            <Image
+                                src={item.img}
+                                alt={item.title}
+                                fill
+                                className="object-fill opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
+                            <div className="absolute bottom-4 left-4">
+                                <p className="text-white font-bold text-sm">{item.title}</p>
+                                <p className="text-zinc-500 text-xs">{item.desc}</p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
               </div>
             </div>
