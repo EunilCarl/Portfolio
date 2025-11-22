@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 
 export default function GawaPHProjectPage() {
   const project = {
@@ -15,12 +16,6 @@ export default function GawaPHProjectPage() {
     liveSite: "",
     repo: "https://github.com/EunilCarl/GawaPH",
     categories: ["Startup", "Full-Stack", "Web App"],
-    tech: [
-      { name: "ASP.NET MVC", icon: "/icons/dotnet.svg" },
-      { name: "Supabase", icon: "/icons/supabase.svg" },
-      { name: "PostgreSQL", icon: "/icons/postgresql.svg" },
-      { name: "C#", icon: "/icons/csharp.svg" },
-    ],
     status: "Completed",
     contributors: [
         {
@@ -54,6 +49,52 @@ export default function GawaPHProjectPage() {
       "/projects/gawaph-ui.png",
     ],
   };
+
+ const techStacks = [
+  {
+    id: 1,
+    name: "ASP.NET",
+    designation: "Back-End",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/1200px-.NET_Core_Logo.svg.png",
+  },
+  {
+    id: 2,
+    name: "C#",
+    designation: "Language",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+  },
+  {
+    id: 3,
+    name: "Supabase",
+    designation: "Backend / Database",
+    image: "/supabase.svg",
+  },
+  {
+    id: 4,
+    name: "Bootstrap",
+    designation: "Libraries",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+  },
+  {
+    id: 5,
+    name: "JavaScript",
+    designation: "Language",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  },
+  {
+    id: 6,
+    name: "Git",
+    designation: "Version Control",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  },
+  {
+    id: 7,
+    name: "GitHub",
+    designation: "Hosting",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+  },
+];
+
 
   const statusColor =
     project.status === "Completed"
@@ -207,25 +248,9 @@ export default function GawaPHProjectPage() {
                 <h3 className="text-sm font-semibold text-zinc-500 uppercase tracking-widest mb-4">
                   Built With
                 </h3>
-                <div className="flex flex-wrap gap-6">
-                  {project.tech.map(({ name, icon }, i) => (
-                    <div
-                      key={i}
-                      className="group flex flex-col items-center gap-2"
-                      title={name}
-                    >
-                      <div className="p-3 rounded-xl bg-zinc-900/50 border border-zinc-800 group-hover:border-zinc-600 transition-colors">
-                        <Image
-                          src={icon}
-                          alt={name}
-                          width={24}
-                          height={24}
-                          className="opacity-70 group-hover:opacity-100 transition-opacity"
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                <div className="flex flex-row flex-wrap items-center justify-center gap-2 mb-16 w-full max-w-4xl ">
+                                                <AnimatedTooltip items={techStacks} />
+                                              </div>
               </div>
             </div>
 
@@ -291,57 +316,17 @@ export default function GawaPHProjectPage() {
           </div>
 
           <section className="relative border-t border-zinc-800 pt-20">
-            <div className="grid lg:grid-cols-12 gap-12">
-              <div className="lg:col-span-4">
-                <h2 className="text-3xl font-bold mb-6 text-white">How it&apos;s Made</h2>
-                <div className="h-1 w-20 bg-gradient-to-r from-yellow-500 to-transparent mb-8" />
-                <p className="text-zinc-400 leading-loose text-lg">{project.story}</p>
-                <div className="mt-8 p-4 bg-zinc-900/30 border-l-2 border-yellow-500">
-                  <p className="text-zinc-500 text-sm italic">Timeline: {project.timeline}</p>
-                </div>
-              </div>
-
-              <div className="lg:col-span-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="md:row-span-2 relative rounded-2xl overflow-hidden border border-zinc-800 h-full min-h-[300px]">
-                    <Image
-                      src={project.progressImages[0]}
-                      alt="Wireframing process"
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                      <span className="text-xs font-mono text-zinc-300">Phase 1: Wireframing</span>
-                    </div>
-                  </div>
-
-                  <div className="relative rounded-2xl overflow-hidden border border-zinc-800 h-64">
-                    <Image
-                      src={project.progressImages[1]}
-                      alt="Backend Development"
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                      <span className="text-xs font-mono text-zinc-300">Phase 2: Backend Logic</span>
-                    </div>
-                  </div>
-
-                  <div className="relative rounded-2xl overflow-hidden border border-zinc-800 h-64">
-                    <Image
-                      src={project.progressImages[2]}
-                      alt="Final Polish"
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                      <span className="text-xs font-mono text-zinc-300">Phase 3: UI Polish</span>
-                    </div>
-                  </div>
-                </div>
+          <div className="grid lg:grid-cols-12 gap-12">
+            <div className="lg:col-span-12">
+              <h2 className="text-3xl font-bold mb-6 text-white">How it&apos;s Made</h2>
+              <div className="h-1 w-20 bg-gradient-to-r from-yellow-500 to-transparent mb-8" />
+              <p className="text-zinc-400 leading-loose text-lg">{project.story}</p>
+              <div className="mt-8 p-4 bg-zinc-900/30 border-l-2 border-yellow-500">
+                <p className="text-zinc-500 text-sm italic">Timeline: {project.timeline}</p>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
         </div>
       </main>
     </>
