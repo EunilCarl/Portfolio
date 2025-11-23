@@ -33,7 +33,7 @@ export default function EunilCarlPortfolioPage() {
         id: 1,
         title: "Initial Sketches",
         desc: "Exploring geometric shapes for 'U' and 'N'",
-        img: "https://ik.imagekit.io/6j61dmdpg/ProjectsImages/image.png",
+        img: "https://ik.imagekit.io/6j61dmdpg/ProjectsImages/progress.png",
         className: "md:col-span-3 md:row-span-1 ",
       },
       {
