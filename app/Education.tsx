@@ -18,8 +18,8 @@ export function Education() {
           </h3>
 
           <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
-            Graduated from Senior High School, where I specialized in the
-            <b>STEM Strand</b>. This track ignited my
+            Graduated from Senior High School, where I specialized in the 
+            <b> STEM Strand</b>. This track ignited my
             passion for software development and hands-on coding.
           </p>
           
@@ -45,11 +45,9 @@ export function Education() {
           <h3 className="mb-1 text-lg font-semibold text-black dark:text-white">
             Bataan Peninsula State University
           </h3>
-          {/* Expanded description */}
+
           <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
-            Actively pursuing a Bachelor of Science in Computer Science. As a
-            third-year student, I'm diving deep into advanced topics like
-            web architecture, system design, and AI, building on my SHS foundation.
+            Actively pursuing a Bachelor of Science in Computer Science, majoring in Software Development. As a third-year student, I am deepening my expertise in Full Stack development and UI/UX design, applying the core programming and problem-solving skills I've acquired so far. 
           </p>
 
           <div className="flex flex-wrap items-center gap-4 mt-4">

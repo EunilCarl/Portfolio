@@ -323,16 +323,17 @@ export default function BPSUBulletinProjectPage() {
           </div>
 
           <section className="relative border-t border-zinc-800 pt-20">
-            <div className="grid lg:grid-cols-12 gap-12">
-              <div className="lg:col-span-4">
-                <div className="mt-8 p-4 bg-zinc-900/30 border-l-2 border-yellow-500">
-                  <p className="text-zinc-500 text-sm italic">
-                    Timeline: {project.timeline}
-                  </p>
-                </div>
-              </div>    
+          <div className="grid lg:grid-cols-12 gap-12">
+            <div className="lg:col-span-12">
+              <h2 className="text-3xl font-bold mb-6 text-white">How it&apos;s Made</h2>
+              <div className="h-1 w-20 bg-gradient-to-r from-yellow-500 to-transparent mb-8" />
+              <p className="text-zinc-400 leading-loose text-lg">{project.story}</p>
+              <div className="mt-8 p-4 bg-zinc-900/30 border-l-2 border-yellow-500">
+                <p className="text-zinc-500 text-sm italic">Timeline: {project.timeline}</p>
+              </div>
             </div>
-          </section>
+          </div>
+        </section>
         </div>
       </main>
     </>
