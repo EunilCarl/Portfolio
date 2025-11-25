@@ -15,6 +15,10 @@
 
 A modern, responsive personal portfolio built to showcase projects, experience, and skills. The site focuses on accessibility, fast load times, and smooth micro-interactions while using a component-driven architecture so pieces can be reused across pages.
 
+<p align="center">
+	<img src="public/unil.png" alt="Website preview - Unil" style="max-width:100%;height:auto;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,0.4)" />
+</p>
+
 ## Features
 
 - Clean, responsive design with Tailwind CSS
@@ -38,12 +42,6 @@ A modern, responsive personal portfolio built to showcase projects, experience, 
 - `components/` — UI components and small primitives (see `components/ui/`)
 - `public/` — static assets (logo: `public/favicon.svg`)
 - `lib/` — utility helpers
-
-## Demo / Screenshot
-
-screenshot mamaya:
-
-![screenshot placeholder](public/screenshot.png)
 
 ## Contact
 
