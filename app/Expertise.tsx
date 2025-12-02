@@ -40,7 +40,7 @@ const techStacks = [
     id: 5,
     name: "Tailwind CSS",
     designation: "Libraries",
-    image: "https://scontent.fsfs1-1.fna.fbcdn.net/v/t39.30808-6/299463877_560030875914611_8025210373789510385_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGDrc_rwHDv0T8AugwyGK2oXyjiulHN1tJfKOK6Uc3W0ow4wxBSsqDdtnpRd4nkTnbn41vMc2m-XGso71i3D7lc&_nc_ohc=1hwpGnExzvYQ7kNvwFddaFo&_nc_oc=AdmrQ-qvsa2YOjPg9X2jgZ4zP3WB6ZWK6ConrJdP3BRj5oRV4nbAqMDacAifkH7NQdQ&_nc_zt=23&_nc_ht=scontent.fsfs1-1.fna&_nc_gid=O7micju6hZvUkEadCz860Q&oh=00_Afgbfrz0HF-a8DGLgLHpHchYfiQwyxdhxEejmWkDTGTBMw&oe=691D49B7"
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
   },
   {
     id: 14,

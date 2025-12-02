@@ -15,8 +15,8 @@ export default function EunilCarlPortfolioPage() {
       "A modern, high-performance personal portfolio designed to showcase my journey as a Full-Stack Developer and UI/UX Designer. Built with the latest web technologies, it features fluid animations, a bento-grid layout, and a unique visual identity that reflects my personal brand.",
     liveSite: "https://eunil-carl.vercel.app/",
     repo: "https://github.com/EunilCarl/Portfolio",
-    categories: ["Personal", "Portfolio", "Creative Dev"],
-    status: "In Progress",
+    categories: ["Personal", "Portfolio", "About Me"],
+    status: "Completed",
     contributors: [
       {
         name: "Eunil Carl L. Dela Cruz",
@@ -53,76 +53,74 @@ export default function EunilCarlPortfolioPage() {
     ],
   };
 
-const techStacks = [
-  {
-    id: 7,
-    name: "HTML5",
-    designation: "Markup",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-  },
-  {
-    id: 8,
-    name: "CSS3",
-    designation: "Styling",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-  },
-  {
-    id: 9,
-    name: "JavaScript",
-    designation: "Language",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-  },
-  {
-    id: 1,
-    name: "Next.js 14",
-    designation: "Framework",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-  },
-  {
-    id: 2,
-    name: "React",
-    designation: "Library",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-  },
-  {
-    id: 3,
-    name: "TypeScript",
-    designation: "Language",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-  },
-  {
-    id: 4,
-    name: "Tailwind CSS",
-    designation: "Styling",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-  },
-  {
-    id: 5,
-    name: "Framer Motion",
-    designation: "Animation",
-    image: "https://ik.imagekit.io/6j61dmdpg/logos/framer.svg",
-  },
-  {
-    id: 6,
-    name: "Figma",
-    designation: "Design",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-  },
-  {
-    id: 10,
-    name: "Git",
-    designation: "VCS",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-  },
-  {
-    id: 11,
-    name: "GitHub",
-    designation: "Hosting",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-  },
-];
-
-
+  const techStacks = [
+    {
+      id: 7,
+      name: "HTML5",
+      designation: "Markup",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    },
+    {
+      id: 8,
+      name: "CSS3",
+      designation: "Styling",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    },
+    {
+      id: 9,
+      name: "JavaScript",
+      designation: "Language",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    },
+    {
+      id: 1,
+      name: "Next.js 14",
+      designation: "Framework",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    },
+    {
+      id: 2,
+      name: "React",
+      designation: "Library",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    },
+    {
+      id: 3,
+      name: "TypeScript",
+      designation: "Language",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    },
+    {
+      id: 4,
+      name: "Tailwind CSS",
+      designation: "Styling",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+    },
+    {
+      id: 5,
+      name: "Framer Motion",
+      designation: "Animation",
+      image: "https://ik.imagekit.io/6j61dmdpg/logos/framer.svg",
+    },
+    {
+      id: 6,
+      name: "Figma",
+      designation: "Design",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+    },
+    {
+      id: 10,
+      name: "Git",
+      designation: "VCS",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    },
+    {
+      id: 11,
+      name: "GitHub",
+      designation: "Hosting",
+      image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    },
+  ];
 
   const statusColor =
     project.status === "Completed"
@@ -138,10 +136,10 @@ const techStacks = [
           <BackgroundRippleEffect />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-24">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-12 md:py-24">
           <Link
             href="/all-projects"
-            className="group inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-200 transition-colors mb-16 text-sm uppercase tracking-wider"
+            className="group inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-200 transition-colors mb-8 md:mb-16 text-sm uppercase tracking-wider"
           >
             <span className="material-symbols-outlined text-[18px] group-hover:-translate-x-1 transition-transform">
               arrow_back
@@ -149,34 +147,33 @@ const techStacks = [
             Back to Projects
           </Link>
 
-          <div className="grid lg:grid-cols-12 gap-16 mb-32">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 mb-16 md:mb-32">
             <div className="lg:col-span-7 flex flex-col justify-center">
-              <div className="flex flex-wrap gap-3 mb-6">
+              <div className="flex flex-wrap gap-2 md:gap-3 mb-6">
                 {project.categories.map((cat, i) => (
                   <span
                     key={i}
-                    className="px-4 py-1.5 rounded-full border border-zinc-800 bg-zinc-900/50 text-zinc-300 text-xs font-medium tracking-wide backdrop-blur-sm"
+                    className="px-3 py-1 md:px-4 md:py-1.5 rounded-full border border-zinc-800 bg-zinc-900/50 text-zinc-300 text-[10px] md:text-xs font-medium tracking-wide backdrop-blur-sm"
                   >
                     {cat}
                   </span>
                 ))}
               </div>
 
-              <h1 className="text-6xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-b from-white to-zinc-500">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-b from-white to-zinc-500 leading-tight">
                 {project.title}
               </h1>
-              <h2 className="text-2xl text-zinc-400 mb-8 font-light">
+              <h2 className="text-xl md:text-2xl text-zinc-400 mb-8 font-light">
                 {project.subtitle}
               </h2>
 
-              <div className="block lg:hidden relative group rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl shadow-black/50 mb-10">
+              <div className="block lg:hidden relative group rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl shadow-black/50 mb-10 aspect-video w-full">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 z-10" />
                 <Image
                   src={project.image}
                   alt="Project Preview"
-                  width={600}
-                  height={500}
-                  className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  fill
+                  className="object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute bottom-4 left-4 z-20">
                   <span
@@ -202,15 +199,16 @@ const techStacks = [
                 </div>
               </div>
 
-              <p className="text-zinc-400 text-lg leading-relaxed mb-10 max-w-2xl">
+              <p className="text-zinc-400 text-base md:text-lg leading-relaxed mb-10 max-w-2xl">
                 {project.description}
               </p>
 
-              <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">
-                <div className="flex gap-4">
+              <div className="flex flex-col gap-6 mb-4">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={project.liveSite || "#"}
                     target="_blank"
+                    className="w-full sm:w-auto"
                     onClick={(e) => {
                       if (!project.liveSite) e.preventDefault();
                     }}
@@ -218,11 +216,11 @@ const techStacks = [
                     tabIndex={project.liveSite ? 0 : -1}
                   >
                     <HoverBorderGradient
-                      containerClassName={`rounded-full ${
+                      containerClassName={`rounded-full w-full sm:w-auto ${
                         !project.liveSite ? "opacity-50 cursor-not-allowed" : ""
                       }`}
                       as="button"
-                      className="bg-black cursor-pointer text-white flex items-center space-x-2 px-6 py-3"
+                      className="bg-black cursor-pointer text-white flex items-center justify-center space-x-2 px-6 py-3 w-full sm:w-auto"
                     >
                       <span>Visit Live Site</span>
                       <span className="material-symbols-outlined text-[18px]">
@@ -234,6 +232,7 @@ const techStacks = [
                   <Link
                     href={project.repo || "#"}
                     target="_blank"
+                    className="w-full sm:w-auto"
                     onClick={(e) => {
                       if (!project.repo) e.preventDefault();
                     }}
@@ -241,11 +240,11 @@ const techStacks = [
                     tabIndex={project.repo ? 0 : -1}
                   >
                     <HoverBorderGradient
-                      containerClassName={`rounded-full ${
+                      containerClassName={`rounded-full w-full sm:w-auto ${
                         !project.repo ? "opacity-50 cursor-not-allowed" : ""
                       }`}
                       as="button"
-                      className="bg-zinc-900 cursor-pointer text-zinc-300 flex items-center space-x-2 px-6 py-3"
+                      className="bg-zinc-900 cursor-pointer text-zinc-300 flex items-center justify-center space-x-2 px-6 py-3 w-full sm:w-auto"
                     >
                       <i className="fab fa-github text-xl" />
                       <span>Source Code</span>
@@ -253,9 +252,9 @@ const techStacks = [
                   </Link>
                 </div>
 
-                <div className="mt-2 md:mt-0 flex flex-col md:flex-row md:items-center md:gap-4 text-yellow-400 text-xs italic">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-yellow-400 text-xs italic">
                   {!project.liveSite && (
-                    <p className="flex items-center gap-1 whitespace-normal md:whitespace-nowrap">
+                    <p className="flex items-center gap-1">
                       <i className="material-symbols-outlined text-yellow-400 text-[16px]">
                         warning
                       </i>
@@ -264,7 +263,7 @@ const techStacks = [
                   )}
 
                   {!project.repo && (
-                    <p className="flex items-center gap-1 whitespace-normal md:whitespace-nowrap">
+                    <p className="flex items-center gap-1">
                       <i className="fab fa-github text-yellow-400 text-[16px]" />
                       This project has private GitHub repository
                     </p>
@@ -276,9 +275,9 @@ const techStacks = [
                 <h3 className="text-sm font-semibold text-zinc-500 uppercase tracking-widest mb-4">
                   Built With
                 </h3>
-                <div className="flex flex-row flex-wrap items-center justify-center gap-2 mb-16 w-full max-w-4xl ">
-                        <AnimatedTooltip items={techStacks}/>
-                      </div>
+                <div className="flex flex-row flex-wrap items-center justify-start md:justify-center gap-2 mb-8 md:mb-16 w-full max-w-4xl">
+                  <AnimatedTooltip items={techStacks} />
+                </div>
               </div>
             </div>
 
@@ -343,21 +342,28 @@ const techStacks = [
             </div>
           </div>
 
-          <section className="relative border-t border-zinc-800 pt-20">
-            <div className="grid lg:grid-cols-12 gap-12">
+          <section className="relative border-t border-zinc-800 pt-12 md:pt-20">
+            <div className="grid lg:grid-cols-12 gap-8 md:gap-12">
               <div className="lg:col-span-4">
-                <h2 className="text-3xl font-bold mb-6 text-white">
+                <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">
                   How it&apos;s Made
                 </h2>
                 <div className="h-1 w-20 bg-gradient-to-r from-yellow-500 to-transparent mb-8" />
-                <p className="text-zinc-400 leading-loose text-lg mb-8">
+                <p className="text-zinc-400 leading-loose text-base md:text-lg mb-8">
                   {project.story}
                 </p>
-                
+
                 <div className="mb-10">
-                  <h3 className="text-xl font-bold text-zinc-200 mb-4">The Logo Concept</h3>
+                  <h3 className="text-xl font-bold text-zinc-200 mb-4">
+                    The Logo Concept
+                  </h3>
                   <p className="text-zinc-400 leading-relaxed">
-                    I wanted a logo that felt architectural yet personal. I started by breaking down my initials, exploring how the curvature of 'U' could intersect with 'N' in a minimal, geometric grid. The final design uses negative space to create a symbol that represents both structure (code) and fluidity (design).
+                    I wanted a logo that felt architectural yet personal. I
+                    started by breaking down my initials, exploring how the
+                    curvature of 'U' could intersect with 'N' in a minimal,
+                    geometric grid. The final design uses negative space to
+                    create a symbol that represents both structure (code) and
+                    fluidity (design).
                   </p>
                 </div>
 
@@ -369,25 +375,27 @@ const techStacks = [
               </div>
 
               <div className="lg:col-span-8">
-                <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-3 md:grid-rows-3 gap-4 h-auto md:h-[600px]">
-                    {project.logoProcess.map((item) => (
-                        <div 
-                            key={item.id} 
-                            className={`relative rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/50 group ${item.className}`}
-                        >
-                            <Image
-                                src={item.img}
-                                alt={item.title}
-                                fill
-                                className="object-fill opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
-                            <div className="absolute bottom-4 left-4">
-                                <p className="text-white font-bold text-sm">{item.title}</p>
-                                <p className="text-zinc-500 text-xs">{item.desc}</p>
-                            </div>
-                        </div>
-                    ))}
+                <div className="flex flex-col md:grid md:grid-cols-3 md:grid-rows-3 gap-4 h-auto md:h-[600px]">
+                  {project.logoProcess.map((item) => (
+                    <div
+                      key={item.id}
+                      className={`relative rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900/50 group w-full h-64 md:h-auto ${item.className}`}
+                    >
+                      <Image
+                        src={item.img}
+                        alt={item.title}
+                        fill
+                        className="object-cover md:object-fill opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
+                      <div className="absolute bottom-4 left-4">
+                        <p className="text-white font-bold text-sm">
+                          {item.title}
+                        </p>
+                        <p className="text-zinc-500 text-xs">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
